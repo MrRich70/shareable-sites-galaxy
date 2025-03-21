@@ -14,14 +14,24 @@ const Support = () => {
           Our dedicated support team is ready to help with any technical issues or questions about your service.
         </p>
         
-        <div className="max-w-md mx-auto mb-16">
-          <SupportCard 
-            icon={<Phone className="h-10 w-10" />}
-            title="Call Us"
-            description="Speak directly with our support team."
-            contact="(217) 330-6157"
-            hours="Mon-Fri: 8am-8pm, Sat: 9am-5pm"
-          />
+        <div className="grid md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto mb-16">
+          <div>
+            <SupportCard 
+              icon={<Phone className="h-10 w-10" />}
+              title="Call Us"
+              description="Speak directly with our support team."
+              contact="(217) 330-6157"
+              hours="Mon-Fri: 8am-8pm, Sat: 9am-5pm"
+            />
+          </div>
+          <div className="flex justify-center">
+            <img 
+              src="/lovable-uploads/c05dfb39-689b-4f16-bb09-f9d73696308d.png" 
+              alt="Friendly support representative with headset" 
+              className="rounded-lg shadow-md max-w-full h-auto"
+              style={{ maxHeight: "350px" }}
+            />
+          </div>
         </div>
         
         <Card className="max-w-3xl mx-auto">
