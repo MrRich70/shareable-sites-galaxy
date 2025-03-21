@@ -1,49 +1,43 @@
 
 import React from "react";
-import { Globe, CreditCard, LifeBuoy } from "lucide-react";
-import ServiceCard from "./ServiceCard";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-            Milmine IL Internet Service Provider
+    <div className="relative bg-blue-900 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/20 to-blue-900/80 z-10"></div>
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{
+          backgroundImage: "url('/lovable-uploads/2b9280b5-ed3c-45a6-a76a-d616ba739783.png')"
+        }}
+      ></div>
+      <div className="container mx-auto px-4 py-24 md:py-32 relative z-20">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            High-Speed Internet in Milmine, Illinois
           </h1>
-          <p className="text-xl text-gray-700 mb-8">
-            Fast, reliable internet service for Milmine, IL residents and businesses.
+          <p className="text-xl text-blue-100 mb-8">
+            Experience reliable, fast internet service tailored for residents and businesses 
+            in Milmine, IL. NJoy Communications provides connectivity solutions that keep 
+            you connected to what matters most.
           </p>
-        </div>
-
-        {/* Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
-          <ServiceCard 
-            title="New Service" 
-            description="Shop for residential & business services in Milmine."
-            icon={<Globe className="h-10 w-10" />}
-            path="/service-packages"
-            isExternal={false}
-          />
-          
-          <ServiceCard 
-            title="Online Bill Pay" 
-            description="Quick, convenient, easy and secure."
-            icon={<CreditCard className="h-10 w-10" />}
-            path="https://njoycom.uisp.com/crm/login"
-            isExternal={true}
-          />
-          
-          <ServiceCard 
-            title="Support" 
-            description="Contact us for tech support & customer service."
-            icon={<LifeBuoy className="h-10 w-10" />}
-            path="/support"
-            isExternal={false}
-          />
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link to="/service-packages">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+                View Service Packages
+              </Button>
+            </Link>
+            <Link to="/service-packages">
+              <Button size="lg" variant="outline" className="border-blue-300 text-white hover:bg-blue-800">
+                Get Started
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
