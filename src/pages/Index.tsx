@@ -1,10 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Globe, CreditCard, LifeBuoy } from "lucide-react";
 import { Link } from "react-router-dom";
 import MainLayout from "@/components/layouts/MainLayout";
-import { NavigationMenu } from "@/components/ui/navigation-menu";
 
 const Index = () => {
   return (
@@ -28,7 +26,7 @@ const Index = () => {
                 title="New Service" 
                 description="Shop for residential & business services."
                 icon={<Globe className="h-10 w-10" />}
-                path="/services"
+                path="/service-packages"
                 isExternal={false}
               />
               

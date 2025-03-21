@@ -46,6 +46,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                           </Link>
                         </NavigationMenuLink>
                       </li>
+                      <MenuLink href="/service-packages" title="Internet Packages">
+                        Browse our Connected, Accelerated, and Ultra packages
+                      </MenuLink>
                       <MenuLink href="/residential" title="Residential">
                         High-speed internet for your home
                       </MenuLink>
