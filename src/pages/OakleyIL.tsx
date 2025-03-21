@@ -1,4 +1,3 @@
-
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Button } from "@/components/ui/button";
@@ -43,7 +42,6 @@ const MapSection = () => (
       <div className="bg-gray-100 p-4 rounded-lg mb-8">
         <CityMap 
           city="Oakley" 
-          zoom={13} 
           markerPosition={[39.8134, -88.8353]} 
           className="w-full h-[400px] rounded-lg"
         />

@@ -1,4 +1,3 @@
-
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Button } from "@/components/ui/button";
@@ -12,10 +11,10 @@ const HeroSection = () => (
     <div className="container mx-auto px-4">
       <div className="flex flex-col items-center text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-          High-Speed Internet in La Place, IL
+          High-Speed Internet in LaPlace, IL
         </h1>
         <p className="text-xl text-blue-800 mb-8 max-w-3xl">
-          Reliable, affordable internet service for La Place residents and businesses
+          Reliable, affordable internet service for LaPlace residents and businesses
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
@@ -34,17 +33,16 @@ const MapSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <div className="flex flex-col items-center mb-12 text-center">
-        <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Coverage in La Place, IL</h2>
+        <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Coverage in LaPlace, IL</h2>
         <p className="text-lg text-gray-700 max-w-3xl">
-          NJoy Communications provides high-speed internet services throughout La Place and surrounding areas.
+          NJoy Communications provides high-speed internet services throughout LaPlace and surrounding areas.
         </p>
       </div>
       
       <div className="bg-gray-100 p-4 rounded-lg mb-8">
         <CityMap 
-          city="La Place" 
-          zoom={13} 
-          markerPosition={[39.8022, -88.5747]} 
+          city="LaPlace" 
+          markerPosition={[39.9415, -88.5695]} 
           className="w-full h-[400px] rounded-lg"
         />
       </div>
@@ -53,7 +51,7 @@ const MapSection = () => (
         <div className="bg-blue-50 p-6 rounded-lg inline-flex items-center gap-3">
           <MapPin className="text-blue-700" />
           <span className="text-blue-900 font-medium">
-            Proudly serving La Place, IL and surrounding communities
+            Proudly serving LaPlace, IL and surrounding communities
           </span>
         </div>
       </div>
@@ -65,7 +63,7 @@ const AttractionsSection = () => (
   <section className="py-16 bg-blue-50">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-blue-900 mb-12 text-center">
-        Living in La Place, IL
+        Living in LaPlace, IL
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -104,14 +102,14 @@ const QuestionsSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-blue-900 mb-12 text-center">
-        Frequently Asked Questions About Our La Place Internet Service
+        Frequently Asked Questions About Our LaPlace Internet Service
       </h2>
       
       <div className="max-w-4xl mx-auto">
         <Accordion type="single" collapsible className="space-y-4">
           <AccordionItem value="item-1" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-              What internet speeds can I get in La Place?
+              What internet speeds can I get in LaPlace?
             </AccordionTrigger>
             <AccordionContent className="px-6 py-4 bg-gray-50">
               <p className="text-gray-700">
@@ -133,7 +131,7 @@ const QuestionsSection = () => (
           
           <AccordionItem value="item-3" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-              How reliable is your internet service in La Place?
+              How reliable is your internet service in LaPlace?
             </AccordionTrigger>
             <AccordionContent className="px-6 py-4 bg-gray-50">
               <p className="text-gray-700">
@@ -162,7 +160,7 @@ const HappyCustomersSection = () => (
   <section className="py-16 bg-blue-50">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">
-        What Our La Place Customers Say
+        What Our LaPlace Customers Say
       </h2>
       <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
         Don't just take our word for it—hear from residents who have switched to NJoy Communications.
@@ -213,7 +211,7 @@ const FeaturesSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">
-        Why Choose NJoy Communications in La Place
+        Why Choose NJoy Communications in LaPlace
       </h2>
       <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
         Connecting your home or business with reliable, affordable internet service.
