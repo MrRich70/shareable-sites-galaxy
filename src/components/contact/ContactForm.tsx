@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import PackageSelector from "./PackageSelector";
 import ContactDetails from "./ContactDetails";
 import MessageInput from "./MessageInput";
@@ -50,17 +50,22 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
     console.log("Form submitted:", data);
     setIsSubmitting(true);
     
-    const success = await sendContactForm(data);
-    
-    if (success) {
-      form.reset();
+    try {
+      const success = await sendContactForm(data);
       
-      setTimeout(() => {
-        navigate("/");
-      }, 2000);
+      if (success) {
+        form.reset();
+        
+        // Delay navigation to allow the user to see the success message
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
     }
-    
-    setIsSubmitting(false);
   };
 
   return (
@@ -82,7 +87,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
               disabled={isSubmitting}
             >
               {isSubmitting ? (
-                <>Sending...</>
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Sending...
+                </>
               ) : (
                 <>
                   <Send className="mr-2" />

@@ -20,8 +20,9 @@ const MessageInput: React.FC<MessageInputProps> = ({ control }) => {
           <FormControl>
             <Textarea 
               placeholder="Tell us about your needs"
-              className="min-h-[100px]"
+              className="min-h-[100px] resize-none"
               {...field}
+              onBlur={field.onBlur}
             />
           </FormControl>
           <FormMessage />

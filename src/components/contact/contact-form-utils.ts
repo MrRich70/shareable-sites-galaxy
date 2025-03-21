@@ -6,7 +6,7 @@ import { toast } from "sonner";
 // EmailJS configuration
 export const EMAILJS_SERVICE_ID = "service_yntuqop";
 export const EMAILJS_TEMPLATE_ID = "template_contact";
-export const EMAILJS_USER_ID = "your_user_id";
+export const EMAILJS_USER_ID = "FKFsCUbF1kbFmaxmY"; // Updated with a working user ID
 
 // Form validation schema
 export const formSchema = z.object({
@@ -37,6 +37,9 @@ export function getPackageDisplayName(packageValue: string) {
 
 export async function sendContactForm(data: FormValues) {
   try {
+    // Initialize EmailJS with the user ID
+    emailjs.init(EMAILJS_USER_ID);
+    
     const templateParams = {
       name: data.name,
       address: data.address,
@@ -48,14 +51,15 @@ export async function sendContactForm(data: FormValues) {
       subject: "NEW NJOY LEAD",
     };
     
-    emailjs.init(EMAILJS_USER_ID);
+    console.log("Sending email with params:", templateParams);
     
-    await emailjs.send(
+    const response = await emailjs.send(
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID,
       templateParams
     );
     
+    console.log("EmailJS Response:", response);
     toast.success("Your request has been sent! We'll contact you shortly.");
     return true;
   } catch (error) {
