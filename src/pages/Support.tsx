@@ -3,7 +3,7 @@ import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, HelpCircle } from "lucide-react";
+import { Phone, HelpCircle } from "lucide-react";
 
 const Support = () => {
   return (
@@ -64,14 +64,18 @@ const Support = () => {
                       <li>Power cycle your router, antenna, and all connected devices.</li>
                       <li>Check if any vegetation has grown around your antenna that might be causing signal obstruction.</li>
                       <li>If you are performing a large upload, this can temporarily affect your internet speed. Wait for the upload to complete and your speeds should return to normal.</li>
-                      <li>If these steps don't resolve the issue, please call our support team at (217) 330-6157 and we'll help get your service back to optimal performance.</li>
+                      <li>If these steps don't resolve the issue, please call our support team at <a href="tel:2173306157" className="font-semibold text-blue-700 hover:underline">(217) 330-6157</a> and we'll help get your service back to optimal performance.</li>
                     </ul>
                   </div>
                 }
               />
               <FaqItem 
                 question="How do I upgrade my service plan?"
-                answer="You can upgrade your plan by calling our customer service."
+                answer={
+                  <p>
+                    You can upgrade your plan by calling our customer service at <a href="tel:2173306157" className="font-semibold text-blue-700 hover:underline">(217) 330-6157</a>.
+                  </p>
+                }
               />
             </div>
           </CardContent>
@@ -98,7 +102,12 @@ const SupportCard = ({ icon, title, description, contact, hours, buttonText }: {
         </div>
         <h3 className="text-xl font-bold mb-3 text-blue-900">{title}</h3>
         <p className="text-gray-600 mb-3">{description}</p>
-        {contact && <p className="font-semibold text-blue-900 mb-2">{contact}</p>}
+        {contact && (
+          <a href="tel:2173306157" className="font-semibold text-blue-900 mb-2 text-xl hover:text-blue-700 transition-colors flex items-center">
+            <Phone className="h-5 w-5 mr-2" />
+            {contact}
+          </a>
+        )}
         <p className="text-sm text-gray-500 mb-4">{hours}</p>
         {buttonText && (
           <Button className="bg-blue-600 hover:bg-blue-700">
