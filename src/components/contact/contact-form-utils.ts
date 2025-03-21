@@ -20,6 +20,7 @@ export const formSchema = z.object({
     required_error: "Please select a package",
   }),
   message: z.string().min(1, { message: "Message is required" }),
+  communications_preference: z.string().default("No preference selected"),
 });
 
 export type FormValues = z.infer<typeof formSchema>;
@@ -56,6 +57,7 @@ export async function sendContactForm(data: FormValues) {
       best_time_to_call: data.best_time_to_call,
       package: getPackageDisplayName(data.package),
       message: data.message,
+      communications_preference: data.communications_preference,
       to_email: "njoycom7@gmail.com",
       subject: "NEW NJOY LEAD",
       // Include all fields in a combined format for better email readability
@@ -65,6 +67,7 @@ Address: ${data.address}
 City: ${data.city}
 Phone: ${data.phone || "Not provided"}
 Best time to call: ${data.best_time_to_call}
+Communication Preference: ${data.communications_preference}
 Package: ${getPackageDisplayName(data.package)}
 Message: ${data.message}
       `.trim(),

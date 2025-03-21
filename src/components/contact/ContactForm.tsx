@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -43,6 +44,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
       best_time_to_call: "NA", // Default to Not Applicable
       package: initialPackage,
       message: `I'm interested in the ${getPackageDisplayName(initialPackage)} package. Please contact me.`,
+      communications_preference: "No preference selected",
     },
   });
 
