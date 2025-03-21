@@ -1,3 +1,4 @@
+
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -86,11 +87,7 @@ const Support = () => {
               />
               <FaqItem 
                 question="How do I upgrade my service plan?"
-                answer="You can upgrade your plan by calling our customer service or by logging into your account on our website and selecting 'Manage Plan' from your dashboard."
-              />
-              <FaqItem 
-                question="Is there a fee for late payments?"
-                answer="Yes, payments made after the due date may incur a late fee of $10. We send reminders before the due date to help you avoid these charges."
+                answer="You can upgrade your plan by calling our customer service."
               />
             </div>
           </CardContent>
