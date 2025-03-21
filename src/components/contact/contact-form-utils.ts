@@ -1,10 +1,12 @@
+
 import { z } from "zod";
 import emailjs from 'emailjs-com';
 import { toast } from "sonner";
 
 // EmailJS configuration - updated with provided credentials
 export const EMAILJS_SERVICE_ID = "service_yntuqop";
-export const EMAILJS_TEMPLATE_ID = "template_contact";
+// Update the template ID - the previous one was not found in the EmailJS dashboard
+export const EMAILJS_TEMPLATE_ID = "template_7nbhycl";
 export const EMAILJS_PUBLIC_KEY = "cX6fiJ2MPWoUFu62w"; // Public key
 
 // Form validation schema
