@@ -1,5 +1,5 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -18,12 +18,16 @@ const HeroSection = () => (
           Reliable, affordable internet service for La Place residents and businesses
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
-            Check Availability
-          </Button>
-          <Button size="lg" variant="outline" className="border-blue-700 text-blue-700">
-            View Plans
-          </Button>
+          <Link to="/service-packages">
+            <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
+              Check Availability
+            </Button>
+          </Link>
+          <Link to="/service-packages">
+            <Button size="lg" variant="outline" className="border-blue-700 text-blue-700">
+              View Plans
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
