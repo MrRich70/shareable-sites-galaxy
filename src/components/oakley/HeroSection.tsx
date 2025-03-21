@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => (
   <section className="bg-gradient-to-b from-blue-50 to-white py-20">
@@ -13,12 +14,16 @@ const HeroSection = () => (
           Reliable, affordable internet service for Oakley residents and businesses
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
-            Check Availability
-          </Button>
-          <Button size="lg" variant="outline" className="border-blue-700 text-blue-700">
-            View Plans
-          </Button>
+          <Link to="/service-packages">
+            <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
+              Check Availability
+            </Button>
+          </Link>
+          <Link to="/service-packages">
+            <Button size="lg" variant="outline" className="border-blue-700 text-blue-700">
+              View Plans
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
