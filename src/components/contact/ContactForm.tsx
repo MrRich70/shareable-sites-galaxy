@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -32,7 +33,7 @@ interface ContactFormProps {
 }
 
 // EmailJS configuration
-const EMAILJS_SERVICE_ID = "service_zdrrtya";
+const EMAILJS_SERVICE_ID = "service_yntuqop";
 const EMAILJS_TEMPLATE_ID = "template_contact";
 const EMAILJS_USER_ID = "your_user_id";
 
