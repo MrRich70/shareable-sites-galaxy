@@ -1,8 +1,10 @@
+
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, HelpCircle } from "lucide-react";
+import SupportContactForm from "@/components/support/SupportContactForm";
 
 const Support = () => {
   return (
@@ -13,7 +15,7 @@ const Support = () => {
           Our dedicated support team is ready to help with any technical issues or questions about your service.
         </p>
         
-        <div className="grid md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto mb-16">
+        <div className="grid md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto mb-8">
           <div>
             <SupportCard 
               icon={<Phone className="h-10 w-10" />}
@@ -31,6 +33,11 @@ const Support = () => {
               style={{ maxHeight: "350px" }}
             />
           </div>
+        </div>
+        
+        {/* Support Contact Form */}
+        <div className="max-w-3xl mx-auto mb-16">
+          <SupportContactForm />
         </div>
         
         <Card className="max-w-3xl mx-auto">
