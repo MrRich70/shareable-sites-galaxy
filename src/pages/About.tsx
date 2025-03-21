@@ -37,7 +37,7 @@ const About = () => {
                 <h3 className="text-2xl font-bold text-blue-900 mb-3">Family at the Heart of Our Business</h3>
                 <p className="text-gray-700 mb-4">
                   The foundation of NJoy Communications is built on family values. Our owners have been married since 2002 
-                  and have blessed with 3 children and 7 grandchildren.
+                  and have been blessed with 3 children and 7 grandchildren.
                 </p>
                 <p className="text-gray-700 mb-4">
                   Their commitment to family extends to how they run the business, treating customers and team members like 
