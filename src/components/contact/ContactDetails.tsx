@@ -93,7 +93,7 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({ control }) => {
         name="best_time_to_call"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Best Time to Call *</FormLabel>
+            <FormLabel>Best Time to Call</FormLabel>
             <FormControl>
               <div className="flex">
                 <Clock className="mr-2 h-5 w-5 text-gray-400 mt-2" />

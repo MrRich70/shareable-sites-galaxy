@@ -1,4 +1,3 @@
-
 import { z } from "zod";
 import emailjs from 'emailjs-com';
 import { toast } from "sonner";
@@ -14,9 +13,7 @@ export const formSchema = z.object({
   address: z.string().min(5, { message: "Street address is required" }),
   city: z.string().min(2, { message: "City is required" }),
   phone: z.string().optional(),
-  best_time_to_call: z.string({
-    required_error: "Please select a preferred time",
-  }),
+  best_time_to_call: z.string().optional(),
   package: z.string({
     required_error: "Please select a package",
   }),
