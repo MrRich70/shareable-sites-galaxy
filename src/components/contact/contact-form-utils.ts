@@ -5,7 +5,6 @@ import { toast } from "sonner";
 
 // EmailJS configuration - updated with provided credentials
 export const EMAILJS_SERVICE_ID = "service_yntuqop";
-// Update the template ID to the working one provided by the user
 export const EMAILJS_TEMPLATE_ID = "template_a7dk8tg";
 export const EMAILJS_PUBLIC_KEY = "cX6fiJ2MPWoUFu62w"; // Public key
 
@@ -41,10 +40,9 @@ export async function sendContactForm(data: FormValues) {
     console.log("Starting email sending process with detailed logging...");
     console.log("Form data to send:", JSON.stringify(data, null, 2));
     
-    // According to EmailJS docs, init is not required for public key usage
-    // but we'll keep it for explicit initialization
-    console.log("Initializing EmailJS with Public Key:", EMAILJS_PUBLIC_KEY);
+    // Initialize EmailJS with your public key
     emailjs.init(EMAILJS_PUBLIC_KEY);
+    console.log("EmailJS initialized with public key");
     
     const templateParams = {
       name: data.name,
@@ -61,61 +59,42 @@ export async function sendContactForm(data: FormValues) {
     console.log("Service ID:", EMAILJS_SERVICE_ID);
     console.log("Template ID:", EMAILJS_TEMPLATE_ID);
     
-    try {
-      console.log("Sending email via EmailJS...");
-      
-      // Add more detailed log before sending
-      console.table({
-        'Service ID': EMAILJS_SERVICE_ID,
-        'Template ID': EMAILJS_TEMPLATE_ID,
-        'Public Key': EMAILJS_PUBLIC_KEY,
-        'Data Valid': !!data.name && !!data.address && !!data.message
-      });
-      
-      // Using the updated EmailJS send method with publicKey parameter
-      const response = await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY // Public key passed as the 4th parameter
-      );
-      
-      console.log("EmailJS Response:", response);
-      console.log("Response Status:", response.status);
-      console.log("Response Text:", response.text);
-      
-      toast.success("Your request has been sent! We'll contact you shortly.");
-      return true;
-    } catch (emailError: any) {
-      console.error("EmailJS send error details:", emailError);
-      console.error("Error type:", typeof emailError);
-      console.error("Error message:", emailError.message);
-      console.error("Error stack:", emailError.stack);
-      console.error("Error text:", emailError.text);
-      console.error("Error status:", emailError.status);
-      
-      let errorMessage = "Failed to send your request";
-      
-      if (emailError instanceof Error) {
-        errorMessage += `: ${emailError.message}`;
-      } else if (typeof emailError === 'object' && emailError !== null) {
-        errorMessage += `: ${JSON.stringify(emailError)}`;
+    // Using the proper SDK pattern for sending emails
+    const response = await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      templateParams
+    );
+    
+    console.log("EmailJS Response:", response);
+    console.log("Response Status:", response.status);
+    console.log("Response Text:", response.text);
+    
+    toast.success("Your request has been sent! We'll contact you shortly.");
+    return true;
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+    
+    let errorMessage = "Failed to send your request";
+    
+    if (error instanceof Error) {
+      errorMessage += `: ${error.message}`;
+      console.error("Error message:", error.message);
+      console.error("Error stack:", error.stack);
+    } else if (typeof error === 'object' && error !== null) {
+      console.error("Error details:", JSON.stringify(error));
+      try {
+        // @ts-ignore
+        if (error.text) {
+          // @ts-ignore
+          errorMessage += `: ${error.text}`;
+        }
+      } catch (e) {
+        console.error("Error parsing error object:", e);
       }
-      
-      toast.error(errorMessage);
-      return false;
-    }
-  } catch (initError) {
-    console.error("EmailJS initialization error:", initError);
-    
-    if (initError instanceof Error) {
-      console.error("Error message:", initError.message);
-      console.error("Error stack:", initError.stack);
-    } else {
-      console.error("Unknown error type:", typeof initError);
     }
     
-    toast.error("Failed to initialize email service. Please try again later.");
+    toast.error(errorMessage);
     return false;
   }
 }
