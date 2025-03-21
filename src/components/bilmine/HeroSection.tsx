@@ -23,15 +23,10 @@ const HeroSection = () => {
             in Milmine, IL. NJoy Communications provides connectivity solutions that keep 
             you connected to what matters most.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div>
             <Link to="/service-packages">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
                 View Service Packages
-              </Button>
-            </Link>
-            <Link to="/service-packages">
-              <Button size="lg" variant="outline" className="border-blue-300 text-white hover:bg-blue-800">
-                Get Started
               </Button>
             </Link>
           </div>
