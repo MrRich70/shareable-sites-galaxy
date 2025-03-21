@@ -12,6 +12,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Phone, User, MapPin, Home, Send } from "lucide-react";
 import { toast } from "sonner";
+import emailjs from 'emailjs-com';
 
 // Form validation schema
 const formSchema = z.object({
@@ -31,8 +32,15 @@ interface ContactFormProps {
   initialPackage?: string;
 }
 
+// EmailJS configuration
+// You need to sign up at emailjs.com and get your user ID and template ID
+const EMAILJS_SERVICE_ID = "default_service"; // Replace with your service ID
+const EMAILJS_TEMPLATE_ID = "template_contact"; // Replace with your template ID
+const EMAILJS_USER_ID = "your_user_id"; // Replace with your user ID
+
 const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" }) => {
   const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   // Initialize form with default values
   const form = useForm<FormValues>({
@@ -73,18 +81,47 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
   }
 
   // Handle form submission
-  const onSubmit = (data: FormValues) => {
+  const onSubmit = async (data: FormValues) => {
     console.log("Form submitted:", data);
-    // Show success message
-    toast.success("Your request has been sent! We'll contact you shortly.");
+    setIsSubmitting(true);
     
-    // Reset form
-    form.reset();
-    
-    // Redirect to home page after short delay
-    setTimeout(() => {
-      navigate("/");
-    }, 2000);
+    try {
+      // Prepare the template parameters for EmailJS
+      const templateParams = {
+        name: data.name,
+        address: data.address,
+        city: data.city,
+        phone: data.phone || "Not provided",
+        package: getPackageDisplayName(data.package),
+        message: data.message,
+        to_email: "njoycom7@gmail.com",
+        subject: "NEW NJOY LEAD",
+      };
+      
+      // Send the email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
+      
+      // Show success message
+      toast.success("Your request has been sent! We'll contact you shortly.");
+      
+      // Reset form
+      form.reset();
+      
+      // Redirect to home page after short delay
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("There was a problem sending your request. Please try again or call us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -208,9 +245,20 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
               )}
             />
             
-            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" size="lg">
-              <Send className="mr-2" />
-              Submit Request
+            <Button 
+              type="submit" 
+              className="w-full bg-blue-600 hover:bg-blue-700" 
+              size="lg"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? (
+                <>Sending...</>
+              ) : (
+                <>
+                  <Send className="mr-2" />
+                  Submit Request
+                </>
+              )}
             </Button>
           </form>
         </Form>
