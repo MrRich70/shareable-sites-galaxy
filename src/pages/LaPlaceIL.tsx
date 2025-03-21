@@ -1,3 +1,4 @@
+
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Button } from "@/components/ui/button";
@@ -11,10 +12,10 @@ const HeroSection = () => (
     <div className="container mx-auto px-4">
       <div className="flex flex-col items-center text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-          High-Speed Internet in LaPlace, IL
+          High-Speed Internet in La Place, IL
         </h1>
         <p className="text-xl text-blue-800 mb-8 max-w-3xl">
-          Reliable, affordable internet service for LaPlace residents and businesses
+          Reliable, affordable internet service for La Place residents and businesses
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
@@ -33,17 +34,16 @@ const MapSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <div className="flex flex-col items-center mb-12 text-center">
-        <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Coverage in LaPlace, IL</h2>
+        <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Coverage in La Place, IL</h2>
         <p className="text-lg text-gray-700 max-w-3xl">
-          NJoy Communications provides high-speed internet services throughout LaPlace and surrounding areas.
+          NJoy Communications provides high-speed internet services throughout La Place and surrounding areas.
         </p>
       </div>
       
       <div className="bg-gray-100 p-4 rounded-lg mb-8">
         <CityMap 
-          city="LaPlace" 
-          markerPosition={[39.9415, -88.5695]} 
-          className="w-full h-[400px] rounded-lg"
+          city="La Place, IL" 
+          mapHeight="400px"
         />
       </div>
       
@@ -51,7 +51,7 @@ const MapSection = () => (
         <div className="bg-blue-50 p-6 rounded-lg inline-flex items-center gap-3">
           <MapPin className="text-blue-700" />
           <span className="text-blue-900 font-medium">
-            Proudly serving LaPlace, IL and surrounding communities
+            Proudly serving La Place, IL and surrounding communities
           </span>
         </div>
       </div>

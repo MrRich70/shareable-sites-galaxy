@@ -1,16 +1,18 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 
 interface CityMapProps {
   city: string;
   mapHeight?: string;
+  markerPosition?: number[];
+  className?: string;
 }
 
-const CityMap: React.FC<CityMapProps> = ({ city, mapHeight = "400px" }) => {
+const CityMap: React.FC<CityMapProps> = ({ city, mapHeight = "400px", className }) => {
   const mapRef = useRef<HTMLIFrameElement>(null);
   
   return (
-    <div className="w-full rounded-lg overflow-hidden shadow-lg">
+    <div className={`w-full rounded-lg overflow-hidden shadow-lg ${className || ''}`}>
       <iframe 
         ref={mapRef}
         width="100%" 

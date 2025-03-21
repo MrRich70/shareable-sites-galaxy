@@ -42,8 +42,7 @@ const MapSection = () => (
       <div className="bg-gray-100 p-4 rounded-lg mb-8">
         <CityMap 
           city="Oreana" 
-          markerPosition={[39.9423, -88.8489]} 
-          className="w-full h-[400px] rounded-lg"
+          mapHeight="400px"
         />
       </div>
       
