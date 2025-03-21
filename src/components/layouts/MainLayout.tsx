@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -39,38 +38,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
-                        <li className="row-span-3">
-                          <NavigationMenuLink asChild>
-                            <Link
-                              className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-500 to-blue-700 p-6 no-underline outline-none focus:shadow-md"
-                              to="/services"
-                            >
-                              <div className="mt-4 mb-2 text-lg font-medium text-white">
-                                Internet Services
-                              </div>
-                              <p className="text-sm leading-tight text-white/90">
-                                Discover our residential and business internet plans.
-                              </p>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                        <MenuLink href="/service-packages" title="Internet Packages">
-                          Browse our Connected, Accelerated, and Ultra packages
-                        </MenuLink>
-                        <MenuLink href="/residential" title="Residential">
-                          High-speed internet for your home
-                        </MenuLink>
-                        <MenuLink href="/business" title="Business">
-                          Reliable solutions for your company
-                        </MenuLink>
-                        <MenuLink href="/equipment" title="Equipment">
-                          Routers, modems, and more
-                        </MenuLink>
-                      </ul>
-                    </NavigationMenuContent>
+                    <Link to="/services" className={navigationMenuTriggerStyle()}>
+                      Services
+                    </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <a 
