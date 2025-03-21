@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -14,11 +15,11 @@ const HeroSection = () => {
             Reliable, affordable internet service for Milmine residents and businesses
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="bg-blue-700 hover:bg-blue-800" asChild>
-              <a href="https://preview--shareable-sites-galaxy.lovable.app/service-packages">Check Availability</a>
+            <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
+              <Link to="/service-packages">Check Availability</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-blue-700 text-blue-700" asChild>
-              <a href="https://preview--shareable-sites-galaxy.lovable.app/milmine-il-internet-service-provider">View Plans</a>
+              <Link to="/milmine-il-internet-service-provider">View Plans</Link>
             </Button>
           </div>
         </div>
