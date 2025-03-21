@@ -1,46 +1,31 @@
 
 import React from "react";
-import { Globe, CreditCard, LifeBuoy } from "lucide-react";
-import ServiceCard from "@/components/argenta/ServiceCard";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">
+    <section className="bg-gradient-to-b from-blue-50 to-white py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-            La Place IL Internet Service Provider
+            High-Speed Internet in La Place, IL
           </h1>
-          <p className="text-xl text-gray-700 mb-8">
-            Fast, reliable internet service for La Place, IL residents and businesses.
+          <p className="text-xl text-blue-800 mb-8 max-w-3xl">
+            Reliable, affordable internet service for La Place residents and businesses
           </p>
-        </div>
-
-        {/* Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
-          <ServiceCard 
-            title="New Service" 
-            description="Shop for residential & business services in La Place."
-            icon={<Globe className="h-10 w-10" />}
-            path="/service-packages"
-            isExternal={false}
-          />
-          
-          <ServiceCard 
-            title="Online Bill Pay" 
-            description="Quick, convenient, easy and secure."
-            icon={<CreditCard className="h-10 w-10" />}
-            path="https://njoycom.uisp.com/crm/login"
-            isExternal={true}
-          />
-          
-          <ServiceCard 
-            title="Support" 
-            description="Contact us for tech support & customer service."
-            icon={<LifeBuoy className="h-10 w-10" />}
-            path="/support"
-            isExternal={false}
-          />
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link to="/service-packages">
+              <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
+                Check Availability
+              </Button>
+            </Link>
+            <Link to="/service-packages">
+              <Button size="lg" variant="outline" className="border-blue-700 text-blue-700">
+                View Plans
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
