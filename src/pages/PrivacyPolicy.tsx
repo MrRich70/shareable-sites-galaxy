@@ -1,4 +1,3 @@
-
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 
@@ -67,7 +66,7 @@ const PrivacyPolicy = () => {
           
           <h2 className="text-2xl font-bold mt-8 mb-4 text-blue-900">Contact Us</h2>
           <p className="mb-4">
-            If you have any questions about this Privacy Policy, please contact us at privacy@njoycommunications.com or call us at (555) 123-4567.
+            If you have any questions about this Privacy Policy, please contact us at (217) 330-6157.
           </p>
         </div>
       </div>

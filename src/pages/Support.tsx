@@ -1,4 +1,3 @@
-
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -19,7 +18,7 @@ const Support = () => {
             icon={<Phone className="h-10 w-10" />}
             title="Call Us"
             description="Speak directly with our support team."
-            contact="(555) 123-4567"
+            contact="(217) 330-6157"
             hours="Mon-Fri: 8am-8pm, Sat: 9am-5pm"
           />
           
@@ -33,10 +32,10 @@ const Support = () => {
           
           <SupportCard 
             icon={<HelpCircle className="h-10 w-10" />}
-            title="Email Support"
-            description="Email us for non-urgent issues."
-            contact="support@njoycommunications.com"
-            hours="Response within 24 hours"
+            title="Self-Help Resources"
+            description="Browse our knowledge base for quick answers."
+            hours="Available 24/7"
+            buttonText="View Resources"
           />
         </div>
         
@@ -97,7 +96,14 @@ const Support = () => {
 };
 
 // Support Card Component
-const SupportCard = ({ icon, title, description, contact, hours, buttonText }) => {
+const SupportCard = ({ icon, title, description, contact, hours, buttonText }: { 
+  icon: React.ReactNode; 
+  title: string; 
+  description: string; 
+  contact?: string; 
+  hours: string; 
+  buttonText?: string 
+}) => {
   return (
     <Card className="text-center">
       <CardContent className="p-6 flex flex-col items-center">

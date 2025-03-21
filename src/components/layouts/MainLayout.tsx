@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -110,10 +109,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
               <address className="not-italic text-blue-200">
-                <div>123 Internet Way</div>
-                <div>Wireless City, TX 75001</div>
-                <div className="mt-2">Phone: (555) 123-4567</div>
-                <div>Email: info@njoycommunications.com</div>
+                <div>107 CR 2300N</div>
+                <div>Dalton City, IL 61925</div>
+                <div className="mt-2">Phone: (217) 330-6157</div>
               </address>
             </div>
           </div>
@@ -126,7 +124,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   );
 };
 
-// Helper component for menu links
 const MenuLink = ({ href, title, children }) => {
   return (
     <li>
