@@ -14,6 +14,18 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ThankYou from "./pages/ThankYou";
 import ArgentaIL from "./pages/ArgentaIL";
+import BementIL from "./pages/BementIL";
+import CerroGordoIL from "./pages/CerroGordoIL";
+import ElwinIL from "./pages/ElwinIL";
+import LaPlaceIL from "./pages/LaPlaceIL";
+import LakeCityIL from "./pages/LakeCityIL";
+import MaconIL from "./pages/MaconIL";
+import MaroaIL from "./pages/MaroaIL";
+import MilmineIL from "./pages/MilmineIL";
+import MtZionIL from "./pages/MtZionIL";
+import OakleyIL from "./pages/OakleyIL";
+import OreanaIL from "./pages/OreanaIL";
+import DaltonCityIL from "./pages/DaltonCityIL";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +45,18 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/argenta-il-internet-service-provider" element={<ArgentaIL />} />
+          <Route path="/bement-il-internet-service-provider" element={<BementIL />} />
+          <Route path="/cerro-gordo-il-internet-service-provider" element={<CerroGordoIL />} />
+          <Route path="/elwin-il-internet-service-provider" element={<ElwinIL />} />
+          <Route path="/la-place-il-internet-service-provider" element={<LaPlaceIL />} />
+          <Route path="/lake-city-il-internet-service-provider" element={<LakeCityIL />} />
+          <Route path="/macon-il-internet-service-provider" element={<MaconIL />} />
+          <Route path="/maroa-il-internet-service-provider" element={<MaroaIL />} />
+          <Route path="/milmine-il-internet-service-provider" element={<MilmineIL />} />
+          <Route path="/mt-zion-il-internet-service-provider" element={<MtZionIL />} />
+          <Route path="/oakley-il-internet-service-provider" element={<OakleyIL />} />
+          <Route path="/oreana-il-internet-service-provider" element={<OreanaIL />} />
+          <Route path="/dalton-city-il-internet-service-provider" element={<DaltonCityIL />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

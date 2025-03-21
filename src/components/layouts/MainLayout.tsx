@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -109,18 +110,53 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                 <li><Link to="/disclaimer" className="text-blue-200 hover:text-white">Disclaimer</Link></li>
               </ul>
             </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Coverage Locations</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/argenta-il-internet-service-provider" className="text-blue-200 hover:text-white">
-                    Argenta, IL
-                  </Link>
-                </li>
-              </ul>
-            </div>
             <div className="md:col-span-5">
-              <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+              <h4 className="text-lg font-semibold mb-4">Coverage Locations</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                <Link to="/argenta-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Argenta, IL
+                </Link>
+                <Link to="/bement-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Bement, IL
+                </Link>
+                <Link to="/cerro-gordo-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Cerro Gordo, IL
+                </Link>
+                <Link to="/elwin-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Elwin, IL
+                </Link>
+                <Link to="/la-place-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  La Place, IL
+                </Link>
+                <Link to="/lake-city-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Lake City, IL
+                </Link>
+                <Link to="/macon-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Macon, IL
+                </Link>
+                <Link to="/maroa-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Maroa, IL
+                </Link>
+                <Link to="/milmine-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Milmine, IL
+                </Link>
+                <Link to="/mt-zion-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Mt Zion, IL
+                </Link>
+                <Link to="/oakley-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Oakley, IL
+                </Link>
+                <Link to="/oreana-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Oreana, IL
+                </Link>
+                <Link to="/dalton-city-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                  Dalton City, IL
+                </Link>
+              </div>
+            </div>
+            
+            <div className="md:col-span-5">
+              <Separator className="my-6 bg-blue-800" />
               <address className="not-italic text-blue-200">
                 <div>107 CR 2300N</div>
                 <div>Dalton City, IL 61925</div>
