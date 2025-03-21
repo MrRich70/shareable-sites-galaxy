@@ -80,8 +80,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
       <footer className="bg-blue-900 text-white py-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+            <div className="md:col-span-2">
               <h4 className="text-lg font-semibold mb-4">NJoy Communications Internet Services</h4>
               <p className="text-blue-200">Fast, reliable internet service for residential and business customers.</p>
               <a 
@@ -110,6 +110,16 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
               </ul>
             </div>
             <div>
+              <h4 className="text-lg font-semibold mb-4">Coverage Locations</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/argenta-il-internet-service-provider" className="text-blue-200 hover:text-white">
+                    Argenta, IL
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="md:col-span-5">
               <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
               <address className="not-italic text-blue-200">
                 <div>107 CR 2300N</div>
