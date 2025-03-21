@@ -30,6 +30,8 @@ const SupportContactForm = () => {
       best_time_to_call: "NA",
       subject: "Technical Support Request",
       message: "",
+      address: "",
+      city: "",
     },
   });
 

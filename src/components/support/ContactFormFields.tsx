@@ -4,7 +4,7 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { SupportFormValues } from "./support-form-utils";
-import { MailIcon, User, Phone, Clock } from "lucide-react";
+import { MailIcon, User, Phone, Clock, MapPin, Building } from "lucide-react";
 import { 
   Select, 
   SelectContent, 
@@ -47,6 +47,40 @@ const ContactFormFields: React.FC<ContactFormFieldsProps> = ({ control }) => {
               <div className="flex">
                 <User className="mr-2 h-5 w-5 text-gray-400" />
                 <Input placeholder="Your name" {...field} />
+              </div>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      
+      <FormField
+        control={control}
+        name="address"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Street Address</FormLabel>
+            <FormControl>
+              <div className="flex">
+                <MapPin className="mr-2 h-5 w-5 text-gray-400" />
+                <Input placeholder="Your street address" {...field} />
+              </div>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      
+      <FormField
+        control={control}
+        name="city"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>City</FormLabel>
+            <FormControl>
+              <div className="flex">
+                <Building className="mr-2 h-5 w-5 text-gray-400" />
+                <Input placeholder="Your city" {...field} />
               </div>
             </FormControl>
             <FormMessage />

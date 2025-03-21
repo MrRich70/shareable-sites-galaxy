@@ -15,6 +15,9 @@ export const supportFormSchema = z.object({
   best_time_to_call: z.string().optional(),
   subject: z.string().min(2, { message: "Subject is required" }),
   message: z.string().min(10, { message: "Message should be at least 10 characters" }),
+  // Adding address and city to match requested parameters
+  address: z.string().optional(),
+  city: z.string().optional(),
 });
 
 export type SupportFormValues = z.infer<typeof supportFormSchema>;
@@ -29,14 +32,31 @@ export const sendSupportForm = async (data: SupportFormValues) => {
     console.log("EmailJS initialized with public key");
     
     // Prepare template parameters for the support template
+    // Ensure all requested parameters are included
     const templateParams = {
+      name: data.name,
+      email: data.email,
       from_name: data.name,
       from_email: data.email,
       phone: data.phone || "Not provided",
       best_time_to_call: data.best_time_to_call || "Not specified",
       subject: data.subject,
       message: data.message,
+      address: data.address || "Not provided",
+      city: data.city || "Not provided",
+      time: new Date().toLocaleString(), // Adding current time
       reply_to: data.email,
+      // Format all data for better email readability
+      customer_details: `
+Name: ${data.name}
+Email: ${data.email}
+Address: ${data.address || "Not provided"}
+City: ${data.city || "Not provided"}
+Phone: ${data.phone || "Not provided"}
+Best time to call: ${data.best_time_to_call || "Not specified"}
+Subject: ${data.subject}
+Message: ${data.message}
+      `.trim(),
     };
     
     console.log("Prepared template params:", JSON.stringify(templateParams, null, 2));
