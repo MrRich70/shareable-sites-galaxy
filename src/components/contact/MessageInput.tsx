@@ -14,7 +14,7 @@ const MessageInput: React.FC<MessageInputProps> = ({ control }) => {
   useEffect(() => {
     console.log("EmailJS Debug Info:");
     console.log("- Component: MessageInput loaded");
-    console.log("- Keys available:", !!process.env.EMAILJS_USER_ID || !!window.EMAILJS_USER_ID);
+    console.log("- Component initialized successfully");
   }, []);
 
   return (
