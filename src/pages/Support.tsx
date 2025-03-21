@@ -14,29 +14,13 @@ const Support = () => {
           Our dedicated support team is ready to help with any technical issues or questions about your service.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+        <div className="max-w-md mx-auto mb-16">
           <SupportCard 
             icon={<Phone className="h-10 w-10" />}
             title="Call Us"
             description="Speak directly with our support team."
             contact="(217) 330-6157"
             hours="Mon-Fri: 8am-8pm, Sat: 9am-5pm"
-          />
-          
-          <SupportCard 
-            icon={<MessageCircle className="h-10 w-10" />}
-            title="Live Chat"
-            description="Chat with a support agent online."
-            buttonText="Start Chat"
-            hours="Available 24/7"
-          />
-          
-          <SupportCard 
-            icon={<HelpCircle className="h-10 w-10" />}
-            title="Self-Help Resources"
-            description="Browse our knowledge base for quick answers."
-            hours="Available 24/7"
-            buttonText="View Resources"
           />
         </div>
         
