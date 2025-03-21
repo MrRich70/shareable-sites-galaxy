@@ -54,7 +54,7 @@ const App = () => (
           <Route path="/oakley-il-internet-service-provider" element={<OakleyIL />} />
           <Route path="/oreana-il-internet-service-provider" element={<OreanaIL />} />
           <Route path="/dalton-city-il-internet-service-provider" element={<DaltonCityIL />} />
-          <Route path="/bilmine-il-internet-service-provider" element={<BilmineIL />} />
+          <Route path="/milmine-il-internet-service-provider" element={<BilmineIL />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
