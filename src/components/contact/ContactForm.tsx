@@ -34,9 +34,10 @@ interface ContactFormProps {
 
 // EmailJS configuration
 // You need to sign up at emailjs.com and get your user ID and template ID
+// For Gmail, you need to ensure you've given the right permissions in EmailJS
 const EMAILJS_SERVICE_ID = "default_service"; // Replace with your service ID
-const EMAILJS_TEMPLATE_ID = "template_contact"; // Replace with your template ID
-const EMAILJS_USER_ID = "your_user_id"; // Replace with your user ID
+const EMAILJS_TEMPLATE_ID = "template_contact"; // Replace with your template ID 
+const EMAILJS_USER_ID = "your_user_id"; // Replace with your public key
 
 const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" }) => {
   const navigate = useNavigate();
@@ -99,11 +100,13 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
       };
       
       // Send the email using EmailJS
+      // Use the newer init + sendForm pattern which can help with some authentication issues
+      emailjs.init(EMAILJS_USER_ID);
+      
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_USER_ID
+        templateParams
       );
       
       // Show success message
