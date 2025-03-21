@@ -18,6 +18,8 @@ export const supportFormSchema = z.object({
   // Adding address and city to match requested parameters
   address: z.string().optional(),
   city: z.string().optional(),
+  // Adding communications preference
+  communications_preference: z.string().default("No preference selected"),
 });
 
 export type SupportFormValues = z.infer<typeof supportFormSchema>;
@@ -45,6 +47,7 @@ export const sendSupportForm = async (data: SupportFormValues) => {
       address: data.address || "Not provided",
       city: data.city || "Not provided",
       time: new Date().toLocaleString(), // Adding current time
+      communications_preference: data.communications_preference,
       reply_to: data.email,
       // Format all data for better email readability
       customer_details: `
@@ -54,6 +57,7 @@ Address: ${data.address || "Not provided"}
 City: ${data.city || "Not provided"}
 Phone: ${data.phone || "Not provided"}
 Best time to call: ${data.best_time_to_call || "Not specified"}
+Communication Preference: ${data.communications_preference}
 Subject: ${data.subject}
 Message: ${data.message}
       `.trim(),

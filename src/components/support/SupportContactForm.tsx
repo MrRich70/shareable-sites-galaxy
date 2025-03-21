@@ -32,6 +32,7 @@ const SupportContactForm = () => {
       message: "",
       address: "",
       city: "",
+      communications_preference: "No preference selected",
     },
   });
 
