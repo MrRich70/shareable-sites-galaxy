@@ -48,7 +48,7 @@ const Support = () => {
           <CardContent>
             <div className="space-y-6">
               <FaqItem 
-                question="How do I reset my router?"
+                question="How do I power cycle my router?"
                 answer="Unplug your router from power, wait 30 seconds, and plug it back in. Allow 2-3 minutes for it to fully restart and reconnect."
               />
               <FaqItem 
