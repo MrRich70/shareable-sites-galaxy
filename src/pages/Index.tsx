@@ -29,13 +29,15 @@ const Index = () => {
                 description="Shop for residential & business services."
                 icon={<Globe className="h-10 w-10" />}
                 path="/services"
+                isExternal={false}
               />
               
               <ServiceCard 
                 title="Online Bill Pay" 
                 description="Quick, convenient, easy and secure."
                 icon={<CreditCard className="h-10 w-10" />}
-                path="/billing"
+                path="https://njoycom.uisp.com/crm/login"
+                isExternal={true}
               />
               
               <ServiceCard 
@@ -43,6 +45,7 @@ const Index = () => {
                 description="Contact us for tech support & customer service."
                 icon={<LifeBuoy className="h-10 w-10" />}
                 path="/support"
+                isExternal={false}
               />
             </div>
           </div>
@@ -74,21 +77,31 @@ const Index = () => {
 };
 
 // Service Card Component
-const ServiceCard = ({ title, description, icon, path }) => {
+const ServiceCard = ({ title, description, icon, path, isExternal }) => {
+  const cardContent = (
+    <CardContent className="p-6 text-center flex flex-col items-center justify-center min-h-[220px] cursor-pointer">
+      <div className="mb-4 text-blue-600">
+        {icon}
+      </div>
+      <h3 className="text-xl font-bold mb-2 text-blue-900">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+      <Button className="mt-4 bg-blue-600 hover:bg-blue-700" size="lg">
+        Learn More
+      </Button>
+    </CardContent>
+  );
+
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg">
-      <Link to={path}>
-        <CardContent className="p-6 text-center flex flex-col items-center justify-center min-h-[220px] cursor-pointer">
-          <div className="mb-4 text-blue-600">
-            {icon}
-          </div>
-          <h3 className="text-xl font-bold mb-2 text-blue-900">{title}</h3>
-          <p className="text-gray-600">{description}</p>
-          <Button className="mt-4 bg-blue-600 hover:bg-blue-700" size="lg">
-            Learn More
-          </Button>
-        </CardContent>
-      </Link>
+      {isExternal ? (
+        <a href={path} target="_blank" rel="noopener noreferrer">
+          {cardContent}
+        </a>
+      ) : (
+        <Link to={path}>
+          {cardContent}
+        </Link>
+      )}
     </Card>
   );
 };

@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -58,9 +59,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link to="/billing" className={navigationMenuTriggerStyle()}>
+                  <a 
+                    href="https://njoycom.uisp.com/crm/login" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={navigationMenuTriggerStyle()}
+                  >
                     Billing
-                  </Link>
+                  </a>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link to="/support" className={navigationMenuTriggerStyle()}>
@@ -93,7 +99,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 <li><Link to="/services" className="text-blue-200 hover:text-white">Services</Link></li>
-                <li><Link to="/billing" className="text-blue-200 hover:text-white">Billing</Link></li>
+                <li><a href="https://njoycom.uisp.com/crm/login" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white">Billing</a></li>
                 <li><Link to="/support" className="text-blue-200 hover:text-white">Support</Link></li>
                 <li><Link to="/contact" className="text-blue-200 hover:text-white">Contact</Link></li>
               </ul>

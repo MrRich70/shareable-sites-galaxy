@@ -20,6 +20,8 @@ const Billing = () => {
             title="Pay Your Bill"
             description="Make a one-time payment using your credit card or bank account."
             buttonText="Pay Now"
+            buttonLink="https://njoycom.uisp.com/crm/login"
+            isExternal={true}
           />
           
           <BillingCard 
@@ -27,6 +29,8 @@ const Billing = () => {
             title="AutoPay Setup"
             description="Never miss a payment by setting up automatic monthly payments."
             buttonText="Set Up AutoPay"
+            buttonLink="https://njoycom.uisp.com/crm/login"
+            isExternal={true}
           />
           
           <BillingCard 
@@ -34,6 +38,8 @@ const Billing = () => {
             title="View Statements"
             description="Access your current and past statements online."
             buttonText="View Statements"
+            buttonLink="https://njoycom.uisp.com/crm/login"
+            isExternal={true}
           />
         </div>
         
@@ -74,7 +80,7 @@ const Billing = () => {
                     <svg className="h-5 w-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    By Phone: (555) 123-4567
+                    By Phone: (217) 330-6157
                   </li>
                   <li className="flex items-center">
                     <svg className="h-5 w-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +105,7 @@ const Billing = () => {
 };
 
 // Billing Card Component
-const BillingCard = ({ icon, title, description, buttonText }) => {
+const BillingCard = ({ icon, title, description, buttonText, buttonLink, isExternal }) => {
   return (
     <Card className="text-center">
       <CardContent className="p-6 flex flex-col items-center">
@@ -108,9 +114,17 @@ const BillingCard = ({ icon, title, description, buttonText }) => {
         </div>
         <h3 className="text-xl font-bold mb-3 text-blue-900">{title}</h3>
         <p className="text-gray-600 mb-6">{description}</p>
-        <Button className="bg-blue-600 hover:bg-blue-700">
-          {buttonText}
-        </Button>
+        {isExternal ? (
+          <a href={buttonLink} target="_blank" rel="noopener noreferrer">
+            <Button className="bg-blue-600 hover:bg-blue-700">
+              {buttonText}
+            </Button>
+          </a>
+        ) : (
+          <Button className="bg-blue-600 hover:bg-blue-700">
+            {buttonText}
+          </Button>
+        )}
       </CardContent>
     </Card>
   );
