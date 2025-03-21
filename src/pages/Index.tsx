@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Globe, CreditCard, LifeBuoy } from "lucide-react";
@@ -45,6 +46,34 @@ const Index = () => {
                 path="/support"
                 isExternal={false}
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Happy Customers Section */}
+        <section className="py-16 bg-blue-50">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+              <div className="w-full md:w-1/2">
+                <img 
+                  src="/lovable-uploads/9f43d6c3-740d-4926-a07a-6946d9a448f7.png" 
+                  alt="Happy family enjoying NJoy internet with their dog"
+                  className="rounded-lg shadow-lg w-full h-auto"
+                />
+              </div>
+              <div className="w-full md:w-1/2">
+                <h2 className="text-3xl font-bold text-blue-900 mb-4">Experience Internet That Brings Joy to Your Home</h2>
+                <p className="text-lg text-gray-700 mb-6">
+                  At NJoy Communications, we believe that reliable internet is essential for the modern family. 
+                  Whether you're working from home, streaming your favorite shows, or staying connected with loved ones, 
+                  our internet service keeps you connected without interruption.
+                </p>
+                <Link to="/service-packages">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                    Find Your Perfect Plan
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
