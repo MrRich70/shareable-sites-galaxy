@@ -1,3 +1,4 @@
+
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Button } from "@/components/ui/button";
@@ -108,6 +109,28 @@ const QuestionsSection = () => (
         <Accordion type="single" collapsible className="space-y-4">
           <AccordionItem value="item-1" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
+              What is the history of Milmine, IL?
+            </AccordionTrigger>
+            <AccordionContent className="px-6 py-4 bg-gray-50">
+              <p className="text-gray-700">
+                Milmine is a small unincorporated community in Piatt County, Illinois. It was established in the late 19th century and named after a local landowner. The community grew around the railroad station that was built as part of the expansion of rail transportation in central Illinois, primarily serving the agricultural needs of the surrounding farmland.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          
+          <AccordionItem value="item-2" className="border border-gray-200 rounded-lg overflow-hidden">
+            <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
+              What were the main industries in Milmine, IL?
+            </AccordionTrigger>
+            <AccordionContent className="px-6 py-4 bg-gray-50">
+              <p className="text-gray-700">
+                Agriculture has always been the primary industry in and around Milmine. The fertile soil of central Illinois made the area ideal for growing corn and soybeans. The railroad provided transportation for agricultural products, and grain elevators were built to store crops for shipment. Small businesses serving the farming community also played an important role in Milmine's economy.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          
+          <AccordionItem value="item-3" className="border border-gray-200 rounded-lg overflow-hidden">
+            <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
               What internet speeds can I get in Milmine?
             </AccordionTrigger>
             <AccordionContent className="px-6 py-4 bg-gray-50">
@@ -117,7 +140,7 @@ const QuestionsSection = () => (
             </AccordionContent>
           </AccordionItem>
           
-          <AccordionItem value="item-2" className="border border-gray-200 rounded-lg overflow-hidden">
+          <AccordionItem value="item-4" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
               Is there a contract required for internet service?
             </AccordionTrigger>
@@ -128,7 +151,7 @@ const QuestionsSection = () => (
             </AccordionContent>
           </AccordionItem>
           
-          <AccordionItem value="item-3" className="border border-gray-200 rounded-lg overflow-hidden">
+          <AccordionItem value="item-5" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
               How reliable is your internet service in Milmine?
             </AccordionTrigger>
@@ -139,7 +162,7 @@ const QuestionsSection = () => (
             </AccordionContent>
           </AccordionItem>
           
-          <AccordionItem value="item-4" className="border border-gray-200 rounded-lg overflow-hidden">
+          <AccordionItem value="item-6" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
               How soon can I get installed after signing up?
             </AccordionTrigger>
