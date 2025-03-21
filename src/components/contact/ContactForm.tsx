@@ -36,6 +36,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      email: "",
       name: "",
       address: "",
       city: "",

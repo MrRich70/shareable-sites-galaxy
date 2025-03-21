@@ -1,3 +1,4 @@
+
 import { z } from "zod";
 import emailjs from 'emailjs-com';
 import { toast } from "sonner";
@@ -9,6 +10,7 @@ export const EMAILJS_PUBLIC_KEY = "cX6fiJ2MPWoUFu62w"; // Public key
 
 // Form validation schema
 export const formSchema = z.object({
+  email: z.string().email({ message: "Please enter a valid email address" }),
   name: z.string().min(2, { message: "Name is required" }),
   address: z.string().min(5, { message: "Street address is required" }),
   city: z.string().min(2, { message: "City is required" }),

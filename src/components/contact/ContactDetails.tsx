@@ -2,7 +2,7 @@
 import React from "react";
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Phone, User, MapPin, Home, Clock } from "lucide-react";
+import { Phone, User, MapPin, Home, Clock, Mail } from "lucide-react";
 import { Control } from "react-hook-form";
 import { FormValues } from "./contact-form-utils";
 import { 
@@ -20,6 +20,23 @@ interface ContactDetailsProps {
 const ContactDetails: React.FC<ContactDetailsProps> = ({ control }) => {
   return (
     <>
+      <FormField
+        control={control}
+        name="email"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Email Address *</FormLabel>
+            <FormControl>
+              <div className="flex">
+                <Mail className="mr-2 h-5 w-5 text-gray-400" />
+                <Input placeholder="your.email@example.com" type="email" {...field} />
+              </div>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      
       <FormField
         control={control}
         name="name"
