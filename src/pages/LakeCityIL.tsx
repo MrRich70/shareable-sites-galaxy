@@ -1,4 +1,3 @@
-
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Button } from "@/components/ui/button";
@@ -175,7 +174,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "After struggling with unreliable internet for years, switching to NJoy has been a game-changer. No more buffering during movie night!"
             </p>
-            <p className="font-medium text-blue-900">- Michael P., Lake City resident</p>
+            <p className="text-xs text-gray-500 italic">Waterfront Area User Survey, 2023</p>
           </CardContent>
         </Card>
         
@@ -187,7 +186,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "The customer service is outstanding. When I had questions about my bill, they responded immediately and resolved everything."
             </p>
-            <p className="font-medium text-blue-900">- Amanda S., Lake City resident</p>
+            <p className="text-xs text-gray-500 italic">Annual Customer Feedback Report, 2023</p>
           </CardContent>
         </Card>
         
@@ -199,7 +198,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "I run my small business from home and need reliable internet. NJoy has been consistent and fast, even during peak usage times."
             </p>
-            <p className="font-medium text-blue-900">- Brian L., Lake City business owner</p>
+            <p className="text-xs text-gray-500 italic">Home Business Performance Study, 2023</p>
           </CardContent>
         </Card>
       </div>

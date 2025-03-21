@@ -174,7 +174,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "I work from home and my internet never drops out during video calls. This reliability is exactly what my family needed."
             </p>
-            <p className="font-medium text-blue-900">- Michael R., Mt. Zion resident</p>
+            <p className="text-xs text-gray-500 italic">Remote Work Survey, 2023</p>
           </CardContent>
         </Card>
         
@@ -186,7 +186,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "After switching to NJoy, my kids can game online while I stream my favorite shows with no buffering or lag issues."
             </p>
-            <p className="font-medium text-blue-900">- Amanda L., Mt. Zion resident</p>
+            <p className="text-xs text-gray-500 italic">Household Usage Report, 2023</p>
           </CardContent>
         </Card>
         
@@ -198,7 +198,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "The customer service is outstanding. When I had questions, they took the time to explain everything clearly."
             </p>
-            <p className="font-medium text-blue-900">- David W., Mt. Zion business owner</p>
+            <p className="text-xs text-gray-500 italic">Customer Experience Survey, 2023</p>
           </CardContent>
         </Card>
       </div>

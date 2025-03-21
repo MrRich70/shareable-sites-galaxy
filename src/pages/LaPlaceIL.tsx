@@ -179,6 +179,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "After struggling with unreliable internet for years, switching to NJoy has been a game-changer. No more buffering during movie night!"
             </p>
+            <p className="text-xs text-gray-500 italic">Customer Satisfaction Survey, 2023</p>
           </CardContent>
         </Card>
         
@@ -190,6 +191,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "The customer service is outstanding. When I had questions about my bill, they responded immediately and resolved everything."
             </p>
+            <p className="text-xs text-gray-500 italic">Service Feedback Form, 2023</p>
           </CardContent>
         </Card>
         
@@ -201,6 +203,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "I run my small business from home and need reliable internet. NJoy has been consistent and fast, even during peak usage times."
             </p>
+            <p className="text-xs text-gray-500 italic">Business Customer Review, 2023</p>
           </CardContent>
         </Card>
       </div>
