@@ -2,9 +2,16 @@
 import React from "react";
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Phone, User, MapPin, Home } from "lucide-react";
+import { Phone, User, MapPin, Home, Clock } from "lucide-react";
 import { Control } from "react-hook-form";
 import { FormValues } from "./contact-form-utils";
+import { 
+  Select, 
+  SelectContent, 
+  SelectItem, 
+  SelectTrigger, 
+  SelectValue 
+} from "@/components/ui/select";
 
 interface ContactDetailsProps {
   control: Control<FormValues>;
@@ -74,6 +81,35 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({ control }) => {
               <div className="flex">
                 <Phone className="mr-2 h-5 w-5 text-gray-400" />
                 <Input placeholder="(555) 123-4567" {...field} />
+              </div>
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      
+      <FormField
+        control={control}
+        name="best_time_to_call"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Best Time to Call *</FormLabel>
+            <FormControl>
+              <div className="flex">
+                <Clock className="mr-2 h-5 w-5 text-gray-400 mt-2" />
+                <Select 
+                  onValueChange={field.onChange} 
+                  defaultValue={field.value}
+                >
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select a time range" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="8-12">8:00 AM - 12:00 PM</SelectItem>
+                    <SelectItem value="12-5">12:00 PM - 5:00 PM</SelectItem>
+                    <SelectItem value="5-7">5:00 PM - 7:00 PM</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
             </FormControl>
             <FormMessage />

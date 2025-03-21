@@ -14,6 +14,9 @@ export const formSchema = z.object({
   address: z.string().min(5, { message: "Street address is required" }),
   city: z.string().min(2, { message: "City is required" }),
   phone: z.string().optional(),
+  best_time_to_call: z.string({
+    required_error: "Please select a preferred time",
+  }),
   package: z.string({
     required_error: "Please select a package",
   }),
@@ -51,6 +54,7 @@ export async function sendContactForm(data: FormValues) {
       address: data.address,
       city: data.city,
       phone: data.phone || "Not provided",
+      best_time_to_call: data.best_time_to_call,
       package: getPackageDisplayName(data.package),
       message: data.message,
       to_email: "njoycom7@gmail.com",
@@ -61,6 +65,7 @@ Name: ${data.name}
 Address: ${data.address}
 City: ${data.city}
 Phone: ${data.phone || "Not provided"}
+Best time to call: ${data.best_time_to_call}
 Package: ${getPackageDisplayName(data.package)}
 Message: ${data.message}
       `.trim(),
