@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -135,9 +136,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                 </Link>
                 <Link to="/macon-il-internet-service-provider" className="text-blue-200 hover:text-white">
                   Macon, IL
-                </Link>
-                <Link to="/maroa-il-internet-service-provider" className="text-blue-200 hover:text-white">
-                  Maroa, IL
                 </Link>
                 <Link to="/mt-zion-il-internet-service-provider" className="text-blue-200 hover:text-white">
                   Mt Zion, IL

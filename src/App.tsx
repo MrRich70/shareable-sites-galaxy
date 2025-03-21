@@ -20,7 +20,6 @@ import ElwinIL from "./pages/ElwinIL";
 import LaPlaceIL from "./pages/LaPlaceIL";
 import LakeCityIL from "./pages/LakeCityIL";
 import MaconIL from "./pages/MaconIL";
-import MaroaIL from "./pages/MaroaIL";
 import MtZionIL from "./pages/MtZionIL";
 import OakleyIL from "./pages/OakleyIL";
 import OreanaIL from "./pages/OreanaIL";
@@ -51,7 +50,6 @@ const App = () => (
           <Route path="/la-place-il-internet-service-provider" element={<LaPlaceIL />} />
           <Route path="/lake-city-il-internet-service-provider" element={<LakeCityIL />} />
           <Route path="/macon-il-internet-service-provider" element={<MaconIL />} />
-          <Route path="/maroa-il-internet-service-provider" element={<MaroaIL />} />
           <Route path="/mt-zion-il-internet-service-provider" element={<MtZionIL />} />
           <Route path="/oakley-il-internet-service-provider" element={<OakleyIL />} />
           <Route path="/oreana-il-internet-service-provider" element={<OreanaIL />} />
