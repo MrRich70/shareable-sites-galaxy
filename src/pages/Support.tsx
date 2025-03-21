@@ -3,7 +3,7 @@ import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, HelpCircle, WifiOff, Wrench, CreditCard, Headphones } from "lucide-react";
+import { Phone, MessageCircle, HelpCircle } from "lucide-react";
 
 const Support = () => {
   return (
@@ -37,31 +37,6 @@ const Support = () => {
             description="Browse our knowledge base for quick answers."
             hours="Available 24/7"
             buttonText="View Resources"
-          />
-        </div>
-        
-        <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Common Support Topics</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
-          <TopicCard
-            icon={<WifiOff className="h-6 w-6" />}
-            title="Internet Outages"
-            linkText="View Status"
-          />
-          <TopicCard
-            icon={<Wrench className="h-6 w-6" />}
-            title="Troubleshooting"
-            linkText="Get Help"
-          />
-          <TopicCard
-            icon={<CreditCard className="h-6 w-6" />}
-            title="Billing Questions"
-            linkText="Learn More"
-          />
-          <TopicCard
-            icon={<Headphones className="h-6 w-6" />}
-            title="Equipment Support"
-            linkText="Get Support"
           />
         </div>
         
@@ -120,23 +95,6 @@ const SupportCard = ({ icon, title, description, contact, hours, buttonText }: {
             {buttonText}
           </Button>
         )}
-      </CardContent>
-    </Card>
-  );
-};
-
-// Topic Card Component
-const TopicCard = ({ icon, title, linkText }) => {
-  return (
-    <Card className="hover:shadow-md transition-shadow">
-      <CardContent className="p-4 flex flex-col items-center text-center">
-        <div className="p-2 bg-blue-100 rounded-full mb-3 mt-4 text-blue-600">
-          {icon}
-        </div>
-        <h3 className="font-medium mb-2">{title}</h3>
-        <Button variant="link" className="text-blue-600 p-0 h-auto">
-          {linkText}
-        </Button>
       </CardContent>
     </Card>
   );
