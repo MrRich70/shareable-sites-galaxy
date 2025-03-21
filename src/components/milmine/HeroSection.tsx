@@ -15,7 +15,7 @@ const HeroSection = () => {
             Reliable, affordable internet service for Milmine residents and businesses
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
+            <Button size="lg" className="bg-blue-700 hover:bg-blue-800" asChild>
               <Link to="/service-packages">Check Availability</Link>
             </Button>
             <Button size="lg" variant="outline" className="border-blue-700 text-blue-700" asChild>
