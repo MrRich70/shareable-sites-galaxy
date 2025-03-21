@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { Control } from "react-hook-form";
@@ -10,6 +10,13 @@ interface MessageInputProps {
 }
 
 const MessageInput: React.FC<MessageInputProps> = ({ control }) => {
+  // This will log the keys at component load to verify they're accessible
+  useEffect(() => {
+    console.log("EmailJS Debug Info:");
+    console.log("- Component: MessageInput loaded");
+    console.log("- Keys available:", !!process.env.EMAILJS_USER_ID || !!window.EMAILJS_USER_ID);
+  }, []);
+
   return (
     <FormField
       control={control}
@@ -22,10 +29,15 @@ const MessageInput: React.FC<MessageInputProps> = ({ control }) => {
               placeholder="Tell us about your needs"
               className="min-h-[100px] resize-none"
               {...field}
-              onBlur={field.onBlur}
-              onFocus={() => console.log("Message field focused")}
+              onBlur={(e) => {
+                console.log("Message field blur event:", e.target.value ? "Has content" : "Empty");
+                field.onBlur();
+              }}
+              onFocus={() => {
+                console.log("Message field focused");
+              }}
               onChange={(e) => {
-                console.log("Message changed:", e.target.value);
+                console.log("Message changed, length:", e.target.value.length);
                 field.onChange(e);
               }}
             />

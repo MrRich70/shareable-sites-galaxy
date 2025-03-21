@@ -3,10 +3,12 @@ import { z } from "zod";
 import emailjs from 'emailjs-com';
 import { toast } from "sonner";
 
-// EmailJS configuration
+// EmailJS configuration - updated with provided credentials
 export const EMAILJS_SERVICE_ID = "service_yntuqop";
 export const EMAILJS_TEMPLATE_ID = "template_contact";
-export const EMAILJS_USER_ID = "FKFsCUbF1kbFmaxmY"; // Updated with a working user ID
+export const EMAILJS_PUBLIC_KEY = "cX6fiJ2MPWoUFu62w"; // Public key
+export const EMAILJS_PRIVATE_KEY = "flF7zl9qqoELVfyJs-HVk"; // Private key (should be used server-side only)
+export const EMAILJS_USER_ID = EMAILJS_PUBLIC_KEY; // Using public key for client-side
 
 // Form validation schema
 export const formSchema = z.object({
@@ -37,11 +39,12 @@ export function getPackageDisplayName(packageValue: string) {
 
 export async function sendContactForm(data: FormValues) {
   try {
-    console.log("Starting email sending process...");
+    console.log("Starting email sending process with detailed logging...");
+    console.log("Form data to send:", JSON.stringify(data, null, 2));
     
-    // Initialize EmailJS with the user ID
-    console.log("Initializing EmailJS with ID:", EMAILJS_USER_ID);
-    emailjs.init(EMAILJS_USER_ID);
+    // Initialize EmailJS with the public key
+    console.log("Initializing EmailJS with Public Key:", EMAILJS_PUBLIC_KEY);
+    emailjs.init(EMAILJS_PUBLIC_KEY);
     
     const templateParams = {
       name: data.name,
@@ -54,11 +57,21 @@ export async function sendContactForm(data: FormValues) {
       subject: "NEW NJOY LEAD",
     };
     
-    console.log("Prepared template params:", templateParams);
+    console.log("Prepared template params:", JSON.stringify(templateParams, null, 2));
     console.log("Service ID:", EMAILJS_SERVICE_ID);
     console.log("Template ID:", EMAILJS_TEMPLATE_ID);
     
     try {
+      console.log("Sending email via EmailJS...");
+      
+      // Add more detailed log before sending
+      console.table({
+        'Service ID': EMAILJS_SERVICE_ID,
+        'Template ID': EMAILJS_TEMPLATE_ID,
+        'User ID': EMAILJS_PUBLIC_KEY,
+        'Data Valid': !!data.name && !!data.address && !!data.message
+      });
+      
       const response = await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
@@ -66,14 +79,25 @@ export async function sendContactForm(data: FormValues) {
       );
       
       console.log("EmailJS Response:", response);
+      console.log("Response Status:", response.status);
+      console.log("Response Text:", response.text);
+      
       toast.success("Your request has been sent! We'll contact you shortly.");
       return true;
-    } catch (emailError) {
+    } catch (emailError: any) {
       console.error("EmailJS send error details:", emailError);
+      console.error("Error type:", typeof emailError);
+      console.error("Error message:", emailError.message);
+      console.error("Error stack:", emailError.stack);
+      console.error("Error text:", emailError.text);
+      console.error("Error status:", emailError.status);
+      
       let errorMessage = "Failed to send your request";
       
       if (emailError instanceof Error) {
         errorMessage += `: ${emailError.message}`;
+      } else if (typeof emailError === 'object' && emailError !== null) {
+        errorMessage += `: ${JSON.stringify(emailError)}`;
       }
       
       toast.error(errorMessage);
@@ -81,6 +105,14 @@ export async function sendContactForm(data: FormValues) {
     }
   } catch (initError) {
     console.error("EmailJS initialization error:", initError);
+    
+    if (initError instanceof Error) {
+      console.error("Error message:", initError.message);
+      console.error("Error stack:", initError.stack);
+    } else {
+      console.error("Unknown error type:", typeof initError);
+    }
+    
     toast.error("Failed to initialize email service. Please try again later.");
     return false;
   }
