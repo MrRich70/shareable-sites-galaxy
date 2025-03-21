@@ -1,4 +1,3 @@
-
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -73,7 +72,17 @@ const Support = () => {
               />
               <FaqItem 
                 question="What should I do if my internet is slow?"
-                answer="If you're experiencing slow internet, try these troubleshooting steps: 1) Power cycle your router, antenna, and all connected devices. 2) Check if any vegetation has grown around your antenna that might be causing signal obstruction. 3) If these steps don't resolve the issue, please call our support team at (217) 330-6157 and we'll help get your service back to optimal performance."
+                answer={
+                  <div className="space-y-2">
+                    <p>If you're experiencing slow internet, try these troubleshooting steps:</p>
+                    <ul className="list-disc pl-5 space-y-1">
+                      <li>Power cycle your router, antenna, and all connected devices.</li>
+                      <li>Check if any vegetation has grown around your antenna that might be causing signal obstruction.</li>
+                      <li>If you are performing a large upload, this can temporarily affect your internet speed. Wait for the upload to complete and your speeds should return to normal.</li>
+                      <li>If these steps don't resolve the issue, please call our support team at (217) 330-6157 and we'll help get your service back to optimal performance.</li>
+                    </ul>
+                  </div>
+                }
               />
               <FaqItem 
                 question="How do I upgrade my service plan?"
