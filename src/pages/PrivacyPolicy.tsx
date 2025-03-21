@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
           
           <h2 className="text-2xl font-bold mt-8 mb-4 text-blue-900">Introduction</h2>
           <p className="mb-4">
-            NJoy Communications ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our internet services, website, or mobile applications.
+            NJoy Communications Internet Services ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our internet services, website, or mobile applications.
           </p>
           <p className="mb-4">
             Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access our services.

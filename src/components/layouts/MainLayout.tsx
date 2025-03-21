@@ -22,7 +22,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-blue-700">NJoy Communications</span>
+              <span className="text-2xl font-bold text-blue-700">NJoy Communications Internet Services</span>
             </Link>
             
             <NavigationMenu>
@@ -87,7 +87,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h4 className="text-lg font-semibold mb-4">NJoy Communications</h4>
+              <h4 className="text-lg font-semibold mb-4">NJoy Communications Internet Services</h4>
               <p className="text-blue-200">Fast, reliable internet service for residential and business customers.</p>
             </div>
             <div>
@@ -118,7 +118,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             </div>
           </div>
           <div className="border-t border-blue-800 mt-8 pt-6 text-center text-blue-300">
-            <p>&copy; {new Date().getFullYear()} NJoy Communications. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} NJoy Communications Internet Services. All rights reserved.</p>
           </div>
         </div>
       </footer>

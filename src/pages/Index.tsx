@@ -15,7 +15,7 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-                Welcome to NJoy Communications
+                Welcome to NJoy Communications Internet Services
               </h1>
               <p className="text-xl text-gray-700 mb-8">
                 Fast, reliable internet service for residential and business customers.
@@ -51,7 +51,7 @@ const Index = () => {
         {/* Features Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-blue-900">Why Choose NJoy Communications?</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-blue-900">Why Choose NJoy Communications Internet Services?</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <FeatureItem 
                 title="Fast Speeds" 
