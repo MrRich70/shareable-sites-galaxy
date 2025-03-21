@@ -73,7 +73,7 @@ const Support = () => {
               />
               <FaqItem 
                 question="What should I do if my internet is slow?"
-                answer="Try restarting your router, check for service outages in your area, make sure you're not exceeding your plan's capacity with too many devices."
+                answer="If you're experiencing slow internet, try these troubleshooting steps: 1) Power cycle your router, antenna, and all connected devices. 2) Check if any vegetation has grown around your antenna that might be causing signal obstruction. 3) If these steps don't resolve the issue, please call our support team at (217) 330-6157 and we'll help get your service back to optimal performance."
               />
               <FaqItem 
                 question="How do I upgrade my service plan?"
