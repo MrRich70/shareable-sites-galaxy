@@ -10,11 +10,18 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-import { Loader2, MailIcon } from "lucide-react";
+import { Loader2, MailIcon, Phone, User, Clock } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import emailjs from 'emailjs-com';
 import { toast } from "sonner";
 import { EMAILJS_SERVICE_ID, EMAILJS_PUBLIC_KEY } from "@/components/contact/contact-form-utils";
+import { 
+  Select, 
+  SelectContent, 
+  SelectItem, 
+  SelectTrigger, 
+  SelectValue 
+} from "@/components/ui/select";
 
 // Support form specific template ID
 const SUPPORT_TEMPLATE_ID = "template_cav6uez";
@@ -22,6 +29,8 @@ const SUPPORT_TEMPLATE_ID = "template_cav6uez";
 const supportFormSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address" }),
   name: z.string().min(2, { message: "Name is required" }),
+  phone: z.string().optional(),
+  best_time_to_call: z.string().optional(),
   subject: z.string().min(2, { message: "Subject is required" }),
   message: z.string().min(10, { message: "Message should be at least 10 characters" }),
 });
@@ -38,6 +47,8 @@ const SupportContactForm = () => {
     defaultValues: {
       email: "",
       name: "",
+      phone: "",
+      best_time_to_call: "NA",
       subject: "Technical Support Request",
       message: "",
     },
@@ -59,6 +70,8 @@ const SupportContactForm = () => {
       const templateParams = {
         from_name: data.name,
         from_email: data.email,
+        phone: data.phone || "Not provided",
+        best_time_to_call: data.best_time_to_call || "Not specified",
         subject: data.subject,
         message: data.message,
         reply_to: data.email,
@@ -152,7 +165,57 @@ const SupportContactForm = () => {
                 <FormItem>
                   <FormLabel>Full Name *</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your name" {...field} />
+                    <div className="flex">
+                      <User className="mr-2 h-5 w-5 text-gray-400" />
+                      <Input placeholder="Your name" {...field} />
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone Number</FormLabel>
+                  <FormControl>
+                    <div className="flex">
+                      <Phone className="mr-2 h-5 w-5 text-gray-400" />
+                      <Input placeholder="(555) 123-4567" {...field} />
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="best_time_to_call"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Best Time to Call</FormLabel>
+                  <FormControl>
+                    <div className="flex">
+                      <Clock className="mr-2 h-5 w-5 text-gray-400 mt-2" />
+                      <Select 
+                        onValueChange={field.onChange} 
+                        defaultValue={field.value}
+                      >
+                        <SelectTrigger className="w-full">
+                          <SelectValue placeholder="Select a time range" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="NA">Not Applicable</SelectItem>
+                          <SelectItem value="8-12">8:00 AM - 12:00 PM</SelectItem>
+                          <SelectItem value="12-5">12:00 PM - 5:00 PM</SelectItem>
+                          <SelectItem value="5-7">5:00 PM - 7:00 PM</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
