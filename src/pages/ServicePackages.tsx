@@ -58,7 +58,7 @@ const ServicePackages = () => {
             price="100"
             features={[
               "Best for large households",
-              "Multiple 4K streams simultaneously",
+              "Simultaneous streaming",
               "Competitive gaming",
               "Large file uploads/downloads",
               "Smart home & IoT devices",
