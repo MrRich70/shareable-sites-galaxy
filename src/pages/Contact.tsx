@@ -19,7 +19,7 @@ import { toast } from "sonner";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name is required" }),
   address: z.string().min(5, { message: "Street address is required" }),
-  city: z.string().optional(),
+  city: z.string().min(2, { message: "City is required" }),
   phone: z.string().optional(),
   package: z.string({
     required_error: "Please select a package",
@@ -43,7 +43,7 @@ const Contact = () => {
       city: "",
       phone: "",
       package: "connected",
-      message: "I'm interested in package. Please contact me.",
+      message: "I'm interested in the Connected package. Please contact me.",
     },
   });
 
@@ -61,7 +61,7 @@ const Contact = () => {
       
       // Update message with the correct package name
       const packageName = getPackageDisplayName(packageValue);
-      form.setValue("message", `I'm interested in ${packageName} package. Please contact me.`);
+      form.setValue("message", `I'm interested in the ${packageName} package. Please contact me.`);
     }
   }, [location.search, form]);
 
