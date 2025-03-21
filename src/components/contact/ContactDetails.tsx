@@ -105,6 +105,7 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({ control }) => {
                     <SelectValue placeholder="Select a time range" />
                   </SelectTrigger>
                   <SelectContent>
+                    <SelectItem value="NA">Not Applicable</SelectItem>
                     <SelectItem value="8-12">8:00 AM - 12:00 PM</SelectItem>
                     <SelectItem value="12-5">12:00 PM - 5:00 PM</SelectItem>
                     <SelectItem value="5-7">5:00 PM - 7:00 PM</SelectItem>

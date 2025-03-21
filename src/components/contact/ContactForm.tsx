@@ -40,7 +40,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
       address: "",
       city: "",
       phone: "",
-      best_time_to_call: "12-5", // Default to midday
+      best_time_to_call: "NA", // Default to Not Applicable
       package: initialPackage,
       message: `I'm interested in the ${getPackageDisplayName(initialPackage)} package. Please contact me.`,
     },
