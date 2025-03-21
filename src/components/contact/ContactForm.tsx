@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -33,17 +32,14 @@ interface ContactFormProps {
 }
 
 // EmailJS configuration
-// You need to sign up at emailjs.com and get your user ID and template ID
-// For Gmail, you need to ensure you've given the right permissions in EmailJS
-const EMAILJS_SERVICE_ID = "default_service"; // Replace with your service ID
-const EMAILJS_TEMPLATE_ID = "template_contact"; // Replace with your template ID 
-const EMAILJS_USER_ID = "your_user_id"; // Replace with your public key
+const EMAILJS_SERVICE_ID = "service_zdrrtya";
+const EMAILJS_TEMPLATE_ID = "template_contact";
+const EMAILJS_USER_ID = "your_user_id";
 
 const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" }) => {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  // Initialize form with default values
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -56,18 +52,15 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
     },
   });
 
-  // When initialPackage changes, update the form values
   useEffect(() => {
     if (initialPackage) {
       form.setValue("package", initialPackage);
       
-      // Update message with the correct package name
       const packageName = getPackageDisplayName(initialPackage);
       form.setValue("message", `I'm interested in the ${packageName} package. Please contact me.`);
     }
   }, [initialPackage, form]);
 
-  // Function to get display name for package
   function getPackageDisplayName(packageValue: string) {
     switch (packageValue) {
       case "connected":
@@ -81,13 +74,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
     }
   }
 
-  // Handle form submission
   const onSubmit = async (data: FormValues) => {
     console.log("Form submitted:", data);
     setIsSubmitting(true);
     
     try {
-      // Prepare the template parameters for EmailJS
       const templateParams = {
         name: data.name,
         address: data.address,
@@ -99,8 +90,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
         subject: "NEW NJOY LEAD",
       };
       
-      // Send the email using EmailJS
-      // Use the newer init + sendForm pattern which can help with some authentication issues
       emailjs.init(EMAILJS_USER_ID);
       
       await emailjs.send(
@@ -109,13 +98,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
         templateParams
       );
       
-      // Show success message
       toast.success("Your request has been sent! We'll contact you shortly.");
       
-      // Reset form
       form.reset();
       
-      // Redirect to home page after short delay
       setTimeout(() => {
         navigate("/");
       }, 2000);
