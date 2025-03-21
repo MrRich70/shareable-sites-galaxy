@@ -56,7 +56,7 @@ const Index = () => {
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
               <div className="w-full md:w-1/2">
                 <img 
-                  src="/lovable-uploads/ad7dccad-7db3-4434-9a47-e9278132237c.png" 
+                  src="/lovable-uploads/9f43d6c3-740d-4926-a07a-6946d9a448f7.png" 
                   alt="Happy family enjoying NJoy internet with their dog"
                   className="rounded-lg shadow-lg w-full h-auto"
                 />
