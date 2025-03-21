@@ -5,8 +5,8 @@ import { toast } from "sonner";
 
 // EmailJS configuration - updated with provided credentials
 export const EMAILJS_SERVICE_ID = "service_yntuqop";
-// Update the template ID - the previous one was not found in the EmailJS dashboard
-export const EMAILJS_TEMPLATE_ID = "template_7nbhycl";
+// Update the template ID to the working one provided by the user
+export const EMAILJS_TEMPLATE_ID = "template_a7dk8tg";
 export const EMAILJS_PUBLIC_KEY = "cX6fiJ2MPWoUFu62w"; // Public key
 
 // Form validation schema
