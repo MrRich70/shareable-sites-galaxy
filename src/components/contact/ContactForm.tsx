@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -84,10 +83,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
       if (success) {
         form.reset();
         
-        // Delay navigation to allow the user to see the success message
-        setTimeout(() => {
-          navigate("/");
-        }, 2000);
+        // Navigate to thank you page instead of homepage
+        navigate("/thank-you");
       } else {
         setError("The form submission failed. Please check the console for more details or try again.");
       }
