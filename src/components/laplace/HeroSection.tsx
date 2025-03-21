@@ -14,7 +14,7 @@ const HeroSection = () => {
             Reliable, affordable internet service for La Place residents and businesses
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="https://preview--shareable-sites-galaxy.lovable.app/milmine-il-internet-service-provider">
+            <a href="https://preview--shareable-sites-galaxy.lovable.app/service-packages">
               <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
                 Check Availability
               </Button>
