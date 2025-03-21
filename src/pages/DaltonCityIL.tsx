@@ -1,3 +1,4 @@
+
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, WifiIcon, CheckCircle2, Zap, Shield, Clock } from "lucide-react";
 import CityMap from "@/components/maps/CityMap";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => (
   <section className="bg-gradient-to-b from-blue-50 to-white py-20">
@@ -17,12 +19,16 @@ const HeroSection = () => (
           Reliable, affordable internet service for Dalton City residents and businesses
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
-            Check Availability
-          </Button>
-          <Button size="lg" variant="outline" className="border-blue-700 text-blue-700">
-            View Plans
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
+              Check Availability
+            </Button>
+          </Link>
+          <Link to="/service-packages">
+            <Button size="lg" variant="outline" className="border-blue-700 text-blue-700">
+              View Plans
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
