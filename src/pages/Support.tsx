@@ -1,3 +1,4 @@
+
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -77,7 +78,7 @@ const Support = () => {
               />
               <FaqItem 
                 question="What should I do if my internet is slow?"
-                answer="Try restarting your router, check for service outages in your area, make sure you're not exceeding your plan's capacity with too many devices, and run a speed test to confirm the issue."
+                answer="Try restarting your router, check for service outages in your area, make sure you're not exceeding your plan's capacity with too many devices."
               />
               <FaqItem 
                 question="How do I upgrade my service plan?"
