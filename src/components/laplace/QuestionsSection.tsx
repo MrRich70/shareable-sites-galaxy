@@ -14,50 +14,6 @@ const QuestionsSection = () => {
           <Accordion type="single" collapsible className="space-y-4">
             <AccordionItem value="item-1" className="border border-gray-200 rounded-lg overflow-hidden">
               <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-                What internet speeds can I get in La Place?
-              </AccordionTrigger>
-              <AccordionContent className="px-6 py-4 bg-gray-50">
-                <p className="text-gray-700">
-                  We offer several internet packages in La Place with speeds ranging from 25 Mbps to 100 Mbps. Our most popular plan provides 50 Mbps, which is perfect for streaming, gaming, and supporting multiple devices.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-2" className="border border-gray-200 rounded-lg overflow-hidden">
-              <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-                Is there a contract required for internet service?
-              </AccordionTrigger>
-              <AccordionContent className="px-6 py-4 bg-gray-50">
-                <p className="text-gray-700">
-                  We offer both contract and no-contract options. You can save on monthly costs with our 12-month agreement, or choose a month-to-month plan for maximum flexibility.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-3" className="border border-gray-200 rounded-lg overflow-hidden">
-              <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-                How reliable is your internet service in La Place?
-              </AccordionTrigger>
-              <AccordionContent className="px-6 py-4 bg-gray-50">
-                <p className="text-gray-700">
-                  Our network in La Place maintains a 99.9% uptime guarantee. We have invested in robust infrastructure specifically designed for rural areas to ensure consistent, reliable service regardless of weather conditions.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-4" className="border border-gray-200 rounded-lg overflow-hidden">
-              <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-                How soon can I get installed after signing up?
-              </AccordionTrigger>
-              <AccordionContent className="px-6 py-4 bg-gray-50">
-                <p className="text-gray-700">
-                  Typical installation time in La Place is 3-5 business days from order date. Our local technicians will coordinate a convenient time for your installation and ensure everything is working perfectly before they leave.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-5" className="border border-gray-200 rounded-lg overflow-hidden">
-              <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
                 What is the history of La Place, IL?
               </AccordionTrigger>
               <AccordionContent className="px-6 py-4 bg-gray-50">
@@ -67,7 +23,7 @@ const QuestionsSection = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-6" className="border border-gray-200 rounded-lg overflow-hidden">
+            <AccordionItem value="item-2" className="border border-gray-200 rounded-lg overflow-hidden">
               <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
                 What were the main industries in La Place, IL?
               </AccordionTrigger>
