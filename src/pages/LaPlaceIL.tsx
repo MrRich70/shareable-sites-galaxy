@@ -63,7 +63,7 @@ const AttractionsSection = () => (
   <section className="py-16 bg-blue-50">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-blue-900 mb-12 text-center">
-        Living in LaPlace, IL
+        Living in La Place, IL
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -102,14 +102,14 @@ const QuestionsSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-blue-900 mb-12 text-center">
-        Frequently Asked Questions About Our LaPlace Internet Service
+        Frequently Asked Questions About Our La Place Internet Service
       </h2>
       
       <div className="max-w-4xl mx-auto">
         <Accordion type="single" collapsible className="space-y-4">
           <AccordionItem value="item-1" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-              What internet speeds can I get in LaPlace?
+              What internet speeds can I get in La Place?
             </AccordionTrigger>
             <AccordionContent className="px-6 py-4 bg-gray-50">
               <p className="text-gray-700">
@@ -131,7 +131,7 @@ const QuestionsSection = () => (
           
           <AccordionItem value="item-3" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-              How reliable is your internet service in LaPlace?
+              How reliable is your internet service in La Place?
             </AccordionTrigger>
             <AccordionContent className="px-6 py-4 bg-gray-50">
               <p className="text-gray-700">
@@ -160,7 +160,7 @@ const HappyCustomersSection = () => (
   <section className="py-16 bg-blue-50">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">
-        What Our LaPlace Customers Say
+        What Our La Place Customers Say
       </h2>
       <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
         Don't just take our word for it—hear from residents who have switched to NJoy Communications.
@@ -211,7 +211,7 @@ const FeaturesSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">
-        Why Choose NJoy Communications in LaPlace
+        Why Choose NJoy Communications in La Place
       </h2>
       <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
         Connecting your home or business with reliable, affordable internet service.

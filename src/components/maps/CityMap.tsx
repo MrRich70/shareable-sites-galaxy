@@ -8,7 +8,7 @@ interface CityMapProps {
   className?: string;
 }
 
-const CityMap: React.FC<CityMapProps> = ({ city, mapHeight = "400px", className }) => {
+const CityMap: React.FC<CityMapProps> = ({ city, mapHeight = "400px", markerPosition, className }) => {
   const mapRef = useRef<HTMLIFrameElement>(null);
   
   return (
