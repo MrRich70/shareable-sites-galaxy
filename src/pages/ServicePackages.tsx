@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -36,6 +37,7 @@ const ServicePackages = () => {
               ...commonFeatures
             ]}
             recommended={false}
+            packageId="connected"
           />
           
           <PackageCard 
@@ -50,6 +52,7 @@ const ServicePackages = () => {
               ...commonFeatures
             ]}
             recommended={true}
+            packageId="accelerated"
           />
           
           <PackageCard 
@@ -65,6 +68,7 @@ const ServicePackages = () => {
               ...commonFeatures
             ]}
             recommended={false}
+            packageId="ultra"
           />
         </div>
 
@@ -78,9 +82,11 @@ const ServicePackages = () => {
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
               Call Us: (217) 330-6157
             </Button>
-            <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-              Contact Online
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                Contact Online
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -89,7 +95,7 @@ const ServicePackages = () => {
 };
 
 // Package Card Component
-const PackageCard = ({ icon, name, price, features, recommended }) => {
+const PackageCard = ({ icon, name, price, features, recommended, packageId }) => {
   return (
     <Card className={`overflow-hidden h-full flex flex-col ${recommended ? 'border-blue-600 border-2 shadow-lg' : ''}`}>
       {recommended && (
@@ -118,9 +124,11 @@ const PackageCard = ({ icon, name, price, features, recommended }) => {
         </ul>
       </CardContent>
       <CardFooter className="pt-4 pb-6">
-        <Button className={`w-full ${recommended ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-500 hover:bg-blue-600'}`} size="lg">
-          Choose Plan
-        </Button>
+        <Link to={`/contact?package=${packageId}`} className="w-full">
+          <Button className={`w-full ${recommended ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-500 hover:bg-blue-600'}`} size="lg">
+            Choose Plan
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );
