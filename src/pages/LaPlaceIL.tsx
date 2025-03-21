@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import MainLayout from "@/components/layouts/MainLayout";
@@ -179,7 +180,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "After struggling with unreliable internet for years, switching to NJoy has been a game-changer. No more buffering during movie night!"
             </p>
-            <p className="font-medium text-blue-900">- Robert J., La Place resident</p>
+            <p className="font-medium text-blue-900">- La Place resident</p>
           </CardContent>
         </Card>
         
@@ -191,7 +192,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "The customer service is outstanding. When I had questions about my bill, they responded immediately and resolved everything."
             </p>
-            <p className="font-medium text-blue-900">- Susan D., La Place resident</p>
+            <p className="font-medium text-blue-900">- La Place resident</p>
           </CardContent>
         </Card>
         
@@ -203,7 +204,7 @@ const HappyCustomersSection = () => (
             <p className="text-gray-700 mb-4">
               "I run my small business from home and need reliable internet. NJoy has been consistent and fast, even during peak usage times."
             </p>
-            <p className="font-medium text-blue-900">- James W., La Place business owner</p>
+            <p className="font-medium text-blue-900">- La Place business owner</p>
           </CardContent>
         </Card>
       </div>
