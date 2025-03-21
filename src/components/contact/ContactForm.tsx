@@ -14,7 +14,10 @@ import {
   formSchema, 
   FormValues, 
   getPackageDisplayName, 
-  sendContactForm 
+  sendContactForm,
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+  EMAILJS_PUBLIC_KEY
 } from "./contact-form-utils";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -59,9 +62,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialPackage = "connected" 
     const debugObj = {
       formData: { ...data },
       emailjsConfig: {
-        serviceId: "service_yntuqop",
-        templateId: "template_contact",
-        userId: "FKFsCUbF1kbFmaxmY",
+        serviceId: EMAILJS_SERVICE_ID,
+        templateId: EMAILJS_TEMPLATE_ID,
+        publicKey: EMAILJS_PUBLIC_KEY,
       },
       browserInfo: {
         userAgent: navigator.userAgent,
