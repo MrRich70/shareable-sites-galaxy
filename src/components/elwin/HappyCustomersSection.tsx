@@ -10,8 +10,8 @@ const HappyCustomersSection = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="w-full md:w-1/2">
             <img 
-              src="/lovable-uploads/2b9280b5-ed3c-45a6-a76a-d616ba739783.png" 
-              alt="Happy family enjoying NJoy internet in Elwin"
+              src="/lovable-uploads/23212ea7-1534-4e41-94bd-213b720aa839.png" 
+              alt="Elwin Illinois - Community with high-speed internet"
               className="rounded-lg shadow-lg w-full h-auto"
             />
           </div>
