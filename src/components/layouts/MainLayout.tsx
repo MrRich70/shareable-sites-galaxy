@@ -119,7 +119,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                   Bement, IL
                 </Link>
                 <Link to="/bilmine-il-internet-service-provider" className="text-blue-200 hover:text-white">
-                  Bilmine, IL
+                  Milmine, IL
                 </Link>
                 <Link to="/cerro-gordo-il-internet-service-provider" className="text-blue-200 hover:text-white">
                   Cerro Gordo, IL

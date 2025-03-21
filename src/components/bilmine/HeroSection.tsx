@@ -9,10 +9,10 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-            Bilmine IL Internet Service Provider
+            Milmine IL Internet Service Provider
           </h1>
           <p className="text-xl text-gray-700 mb-8">
-            Fast, reliable internet service for Bilmine, IL residents and businesses.
+            Fast, reliable internet service for Milmine, IL residents and businesses.
           </p>
         </div>
 
@@ -20,7 +20,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
           <ServiceCard 
             title="New Service" 
-            description="Shop for residential & business services in Bilmine."
+            description="Shop for residential & business services in Milmine."
             icon={<Globe className="h-10 w-10" />}
             path="/service-packages"
             isExternal={false}
