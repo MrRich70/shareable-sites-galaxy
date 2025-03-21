@@ -1,4 +1,3 @@
-
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Button } from "@/components/ui/button";
@@ -18,11 +17,11 @@ const HeroSection = () => (
           Reliable, affordable internet service for Milmine residents and businesses
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
-            Check Availability
+          <Button size="lg" className="bg-blue-700 hover:bg-blue-800" asChild>
+            <a href="https://preview--shareable-sites-galaxy.lovable.app/service-packages">Check Availability</a>
           </Button>
-          <Button size="lg" variant="outline" className="border-blue-700 text-blue-700">
-            View Plans
+          <Button size="lg" variant="outline" className="border-blue-700 text-blue-700" asChild>
+            <a href="https://preview--shareable-sites-galaxy.lovable.app/milmine-il-internet-service-provider">View Plans</a>
           </Button>
         </div>
       </div>
@@ -109,6 +108,50 @@ const QuestionsSection = () => (
         <Accordion type="single" collapsible className="space-y-4">
           <AccordionItem value="item-1" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
+              Q1: What is the population and demographic profile of Milmine, IL?
+            </AccordionTrigger>
+            <AccordionContent className="px-6 py-4 bg-gray-50">
+              <p className="text-gray-700">
+                Milmine, IL, is an unincorporated community in Piatt County with a population of approximately 104 residents as of 2025. The community spans 11.662 square miles, with a population density of 9.2 people per square mile. It consists of 46 households, and the median household income is $29,375. The racial composition is predominantly White (97.22%), with small percentages of Hispanic (1.85%) and American Indian (0.93%) residents.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          
+          <AccordionItem value="item-2" className="border border-gray-200 rounded-lg overflow-hidden">
+            <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
+              Q2: What is the historical significance of Milmine, IL?
+            </AccordionTrigger>
+            <AccordionContent className="px-6 py-4 bg-gray-50">
+              <p className="text-gray-700">
+                Milmine was named after George Milmine, one of the early landowners in the area. The first store in the community was owned by Milmine and Bodman and operated by E.B. Sprague. The town was also home to a prominent grain elevator and warehouse owned by David Kuns. A notable event in its history includes a serious railroad accident in 1882 that caused significant damage to the depot and resulted in fatalities.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          
+          <AccordionItem value="item-3" className="border border-gray-200 rounded-lg overflow-hidden">
+            <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
+              Q3: What industries are present in Milmine, IL?
+            </AccordionTrigger>
+            <AccordionContent className="px-6 py-4 bg-gray-50">
+              <p className="text-gray-700">
+                Agriculture is a key industry in Milmine, with facilities like the Topflight Grain Cooperative playing a significant role. The cooperative operates a grain elevator in the area, supporting local farming operations by handling grain storage and logistics. Additionally, there are three businesses in the ZIP code area employing six people collectively.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          
+          <AccordionItem value="item-4" className="border border-gray-200 rounded-lg overflow-hidden">
+            <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
+              Q4: What notable features or institutions exist in Milmine, IL?
+            </AccordionTrigger>
+            <AccordionContent className="px-6 py-4 bg-gray-50">
+              <p className="text-gray-700">
+                Milmine features a union church and a brick school building constructed around 1872, which historically served as important community institutions. The town also has a grain elevator that remains central to its agricultural economy.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+          
+          <AccordionItem value="item-5" className="border border-gray-200 rounded-lg overflow-hidden">
+            <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
               What is the history of Milmine, IL?
             </AccordionTrigger>
             <AccordionContent className="px-6 py-4 bg-gray-50">
@@ -118,7 +161,7 @@ const QuestionsSection = () => (
             </AccordionContent>
           </AccordionItem>
           
-          <AccordionItem value="item-2" className="border border-gray-200 rounded-lg overflow-hidden">
+          <AccordionItem value="item-6" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
               What were the main industries in Milmine, IL?
             </AccordionTrigger>
@@ -129,7 +172,7 @@ const QuestionsSection = () => (
             </AccordionContent>
           </AccordionItem>
           
-          <AccordionItem value="item-3" className="border border-gray-200 rounded-lg overflow-hidden">
+          <AccordionItem value="item-7" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
               What internet speeds can I get in Milmine?
             </AccordionTrigger>
@@ -140,7 +183,7 @@ const QuestionsSection = () => (
             </AccordionContent>
           </AccordionItem>
           
-          <AccordionItem value="item-4" className="border border-gray-200 rounded-lg overflow-hidden">
+          <AccordionItem value="item-8" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
               Is there a contract required for internet service?
             </AccordionTrigger>
@@ -151,7 +194,7 @@ const QuestionsSection = () => (
             </AccordionContent>
           </AccordionItem>
           
-          <AccordionItem value="item-5" className="border border-gray-200 rounded-lg overflow-hidden">
+          <AccordionItem value="item-9" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
               How reliable is your internet service in Milmine?
             </AccordionTrigger>
@@ -162,7 +205,7 @@ const QuestionsSection = () => (
             </AccordionContent>
           </AccordionItem>
           
-          <AccordionItem value="item-6" className="border border-gray-200 rounded-lg overflow-hidden">
+          <AccordionItem value="item-10" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
               How soon can I get installed after signing up?
             </AccordionTrigger>
@@ -310,3 +353,4 @@ const MilmineIL = () => {
 };
 
 export default MilmineIL;
+
