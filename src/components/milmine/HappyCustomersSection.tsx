@@ -1,54 +1,35 @@
 
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const HappyCustomersSection = () => {
   return (
-    <section className="py-16 bg-blue-50">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">
-          What Our Milmine Customers Say
-        </h2>
-        <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
-          Don't just take our word for it—hear from residents who have switched to NJoy Communications.
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card className="bg-white shadow-sm">
-            <CardContent className="p-6">
-              <div className="flex items-center mb-4">
-                ★★★★★
-              </div>
-              <p className="text-gray-700 mb-4">
-                "After struggling with unreliable internet for years, switching to NJoy has been a game-changer. No more buffering during movie night!"
-              </p>
-              <p className="text-xs text-gray-500 italic">Rural Connectivity Survey, 2023</p>
-            </CardContent>
-          </Card>
-          
-          <Card className="bg-white shadow-sm">
-            <CardContent className="p-6">
-              <div className="flex items-center mb-4">
-                ★★★★★
-              </div>
-              <p className="text-gray-700 mb-4">
-                "The customer service is outstanding. When I had questions about my bill, they responded immediately and resolved everything."
-              </p>
-              <p className="text-xs text-gray-500 italic">Customer Support Feedback, 2023</p>
-            </CardContent>
-          </Card>
-          
-          <Card className="bg-white shadow-sm">
-            <CardContent className="p-6">
-              <div className="flex items-center mb-4">
-                ★★★★★
-              </div>
-              <p className="text-gray-700 mb-4">
-                "I run my small business from home and need reliable internet. NJoy has been consistent and fast, even during peak usage times."
-              </p>
-              <p className="text-xs text-gray-500 italic">Small Business Satisfaction Index, 2023</p>
-            </CardContent>
-          </Card>
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+          <div className="w-full md:w-1/2">
+            <img 
+              src="/lovable-uploads/9f43d6c3-740d-4926-a07a-6946d9a448f7.png" 
+              alt="Happy family enjoying NJoy internet with their dog"
+              className="rounded-lg shadow-lg w-full h-auto"
+            />
+          </div>
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl font-bold text-blue-900 mb-4">
+              Experience Milmine IL Internet Service Provider That Brings Joy
+            </h2>
+            <p className="text-lg text-gray-700 mb-6">
+              At NJoy Communications, we believe that reliable internet is essential for Milmine families and businesses. 
+              Whether you're working from home, streaming your favorite shows, or staying connected with loved ones, 
+              our internet service keeps you connected without interruption.
+            </p>
+            <Link to="/service-packages">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                Find Your Perfect Plan
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

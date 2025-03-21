@@ -1,33 +1,22 @@
 
 import React from "react";
-import { MapPin } from "lucide-react";
 import CityMap from "@/components/maps/CityMap";
 
 const MapSection = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-blue-50">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center mb-12 text-center">
-          <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Coverage in Milmine, IL</h2>
-          <p className="text-lg text-gray-700 max-w-3xl">
-            NJoy Communications provides high-speed internet services throughout Milmine and surrounding areas.
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-blue-900 mb-4">
+            Milmine IL Internet Service Provider - Service Area
+          </h2>
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            NJoy Communications provides high-speed internet throughout Milmine, IL. 
+            View our service area below or contact us to check availability at your address.
           </p>
         </div>
-        
-        <div className="bg-gray-100 p-4 rounded-lg mb-8">
-          <CityMap 
-            city="Milmine, IL" 
-            mapHeight="400px"
-          />
-        </div>
-        
-        <div className="flex justify-center">
-          <div className="bg-blue-50 p-6 rounded-lg inline-flex items-center gap-3">
-            <MapPin className="text-blue-700" />
-            <span className="text-blue-900 font-medium">
-              Proudly serving Milmine, IL and surrounding communities
-            </span>
-          </div>
+        <div className="max-w-4xl mx-auto">
+          <CityMap city="Milmine, IL" mapHeight="500px" />
         </div>
       </div>
     </section>
