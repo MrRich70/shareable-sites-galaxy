@@ -36,7 +36,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <Link to="/services" className={navigationMenuTriggerStyle()}>
+                    <Link to="/service-packages" className={navigationMenuTriggerStyle()}>
                       Services
                     </Link>
                   </NavigationMenuItem>
@@ -95,7 +95,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li><Link to="/services" className="text-blue-200 hover:text-white">Services</Link></li>
+                <li><Link to="/service-packages" className="text-blue-200 hover:text-white">Services</Link></li>
                 <li><a href="https://njoycom.uisp.com/crm/login" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white">Billing</a></li>
                 <li><Link to="/support" className="text-blue-200 hover:text-white">Support</Link></li>
                 <li><Link to="/contact" className="text-blue-200 hover:text-white">Contact</Link></li>
