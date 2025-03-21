@@ -1,4 +1,3 @@
-
 import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -43,7 +42,19 @@ const Support = () => {
             <div className="space-y-6">
               <FaqItem 
                 question="How do I power cycle my router?"
-                answer="Unplug your router from power, wait 30 seconds, and plug it back in. Allow 2-3 minutes for it to fully restart and reconnect."
+                answer={
+                  <div>
+                    <p className="mb-3">Unplug your router from power, wait 30 seconds, and plug it back in. Allow 2-3 minutes for it to fully restart and reconnect.</p>
+                    <div className="flex justify-center mt-4">
+                      <img 
+                        src="/lovable-uploads/0cfb93f5-6be7-47c7-a3bc-76007d6ca9da.png" 
+                        alt="TP-Link router with three antennas" 
+                        className="rounded-md shadow-sm max-w-full"
+                        style={{ maxHeight: "200px" }}
+                      />
+                    </div>
+                  </div>
+                }
               />
               <FaqItem 
                 question="How do I power cycle my Antenna?"
