@@ -44,7 +44,9 @@ export async function sendContactForm(data: FormValues) {
     emailjs.init(EMAILJS_PUBLIC_KEY);
     console.log("EmailJS initialized with public key");
     
+    // Ensure all form fields are properly included in the template parameters
     const templateParams = {
+      from_name: data.name,
       name: data.name,
       address: data.address,
       city: data.city,
@@ -53,6 +55,15 @@ export async function sendContactForm(data: FormValues) {
       message: data.message,
       to_email: "njoycom7@gmail.com",
       subject: "NEW NJOY LEAD",
+      // Include all fields in a combined format for better email readability
+      customer_details: `
+Name: ${data.name}
+Address: ${data.address}
+City: ${data.city}
+Phone: ${data.phone || "Not provided"}
+Package: ${getPackageDisplayName(data.package)}
+Message: ${data.message}
+      `.trim(),
     };
     
     console.log("Prepared template params:", JSON.stringify(templateParams, null, 2));
