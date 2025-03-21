@@ -24,7 +24,7 @@ const About = () => {
             <div className="md:flex">
               <div className="md:w-1/2">
                 <img 
-                  src="/lovable-uploads/7c67180e-1a94-4be8-9389-4e60334849c5.png" 
+                  src="/lovable-uploads/2b9280b5-ed3c-45a6-a76a-d616ba739783.png" 
                   alt="NJoy Communications Owners" 
                   className="w-full h-full object-cover"
                 />
