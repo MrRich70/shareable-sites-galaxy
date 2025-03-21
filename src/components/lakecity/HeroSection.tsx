@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Globe, CreditCard, LifeBuoy } from "lucide-react";
+import { Link } from "react-router-dom";
 import ServiceCard from "@/components/argenta/ServiceCard";
 
 const HeroSection = () => {
