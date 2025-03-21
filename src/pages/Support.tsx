@@ -52,6 +52,26 @@ const Support = () => {
                 answer="Unplug your router from power, wait 30 seconds, and plug it back in. Allow 2-3 minutes for it to fully restart and reconnect."
               />
               <FaqItem 
+                question="How do I power cycle my Antenna?"
+                answer={
+                  <div>
+                    <p className="mb-2">You will have one of these two devices that power your antenna. Pull the power cord from the receptable for 60 seconds and then plug back in.</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-3">
+                      <img 
+                        src="/lovable-uploads/ad7dccad-7db3-4434-9a47-e9278132237c.png" 
+                        alt="Black POE power adapter" 
+                        className="rounded-md w-full max-w-[200px] mx-auto"
+                      />
+                      <img 
+                        src="/lovable-uploads/dafa73e5-426a-4cca-938c-676e6617aae4.png" 
+                        alt="White POE power adapter" 
+                        className="rounded-md w-full max-w-[200px] mx-auto"
+                      />
+                    </div>
+                  </div>
+                }
+              />
+              <FaqItem 
                 question="What should I do if my internet is slow?"
                 answer="Try restarting your router, check for service outages in your area, make sure you're not exceeding your plan's capacity with too many devices."
               />
@@ -105,7 +125,7 @@ const FaqItem = ({ question, answer }) => {
   return (
     <div className="border-b pb-4">
       <h4 className="font-semibold text-lg mb-2 text-blue-900">{question}</h4>
-      <p className="text-gray-700">{answer}</p>
+      <div className="text-gray-700">{answer}</div>
     </div>
   );
 };
