@@ -55,6 +55,36 @@ const QuestionsSection = () => {
                 </p>
               </AccordionContent>
             </AccordionItem>
+
+            <AccordionItem value="item-5" className="border border-gray-200 rounded-lg overflow-hidden">
+              <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
+                What is the history of La Place, IL?
+              </AccordionTrigger>
+              <AccordionContent className="px-6 py-4 bg-gray-50">
+                <p className="text-gray-700">
+                  La Place's history is closely tied to the agricultural development of Piatt County and the arrival of the railroad in the late 19th century. While specific details about its early development are limited in the provided search results, the establishment of a post office and railroad station suggests that La Place served as a local hub for farmers and residents in the surrounding rural area.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6" className="border border-gray-200 rounded-lg overflow-hidden">
+              <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
+                What were the main industries in La Place, IL?
+              </AccordionTrigger>
+              <AccordionContent className="px-6 py-4 bg-gray-50">
+                <p className="text-gray-700">
+                  La Place, IL, is a small, rural community in Piatt County, and its primary industries historically reflect the broader economic trends of the region. The main industries in La Place likely include:
+                </p>
+                <ol className="list-decimal pl-5 mt-2 space-y-1 text-gray-700">
+                  <li><strong>Agriculture</strong>: As part of central Illinois, La Place is situated in a region dominated by farming. Key agricultural products include corn and soybeans, which are staples of Illinois's agricultural economy. Livestock farming may also play a role in the local economy.</li>
+                  <li><strong>Small-Scale Retail and Local Services</strong>: In smaller communities like La Place, local businesses such as grocery stores, hardware stores, and repair services often serve the needs of residents.</li>
+                  <li><strong>Transportation and Logistics</strong>: Given its rural location and proximity to agricultural production, transportation and logistics may play a supporting role in moving goods to market.</li>
+                </ol>
+                <p className="text-gray-700 mt-2">
+                  While specific details about industries in La Place are limited, its economy is closely tied to the agricultural heritage of central Illinois.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </div>
