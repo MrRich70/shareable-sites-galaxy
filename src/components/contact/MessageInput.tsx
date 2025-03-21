@@ -23,6 +23,11 @@ const MessageInput: React.FC<MessageInputProps> = ({ control }) => {
               className="min-h-[100px] resize-none"
               {...field}
               onBlur={field.onBlur}
+              onFocus={() => console.log("Message field focused")}
+              onChange={(e) => {
+                console.log("Message changed:", e.target.value);
+                field.onChange(e);
+              }}
             />
           </FormControl>
           <FormMessage />

@@ -37,7 +37,10 @@ export function getPackageDisplayName(packageValue: string) {
 
 export async function sendContactForm(data: FormValues) {
   try {
+    console.log("Starting email sending process...");
+    
     // Initialize EmailJS with the user ID
+    console.log("Initializing EmailJS with ID:", EMAILJS_USER_ID);
     emailjs.init(EMAILJS_USER_ID);
     
     const templateParams = {
@@ -51,20 +54,34 @@ export async function sendContactForm(data: FormValues) {
       subject: "NEW NJOY LEAD",
     };
     
-    console.log("Sending email with params:", templateParams);
+    console.log("Prepared template params:", templateParams);
+    console.log("Service ID:", EMAILJS_SERVICE_ID);
+    console.log("Template ID:", EMAILJS_TEMPLATE_ID);
     
-    const response = await emailjs.send(
-      EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
-      templateParams
-    );
-    
-    console.log("EmailJS Response:", response);
-    toast.success("Your request has been sent! We'll contact you shortly.");
-    return true;
-  } catch (error) {
-    console.error("Error sending email:", error);
-    toast.error("There was a problem sending your request. Please try again or call us directly.");
+    try {
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams
+      );
+      
+      console.log("EmailJS Response:", response);
+      toast.success("Your request has been sent! We'll contact you shortly.");
+      return true;
+    } catch (emailError) {
+      console.error("EmailJS send error details:", emailError);
+      let errorMessage = "Failed to send your request";
+      
+      if (emailError instanceof Error) {
+        errorMessage += `: ${emailError.message}`;
+      }
+      
+      toast.error(errorMessage);
+      return false;
+    }
+  } catch (initError) {
+    console.error("EmailJS initialization error:", initError);
+    toast.error("Failed to initialize email service. Please try again later.");
     return false;
   }
 }
