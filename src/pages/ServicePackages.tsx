@@ -29,7 +29,6 @@ const ServicePackages = () => {
             icon={<Wifi className="h-12 w-12" />}
             name="Connected"
             price="50"
-            speed="50 Mbps"
             features={[
               "Great for browsing & email",
               "Stream on 1-2 devices",
@@ -43,7 +42,6 @@ const ServicePackages = () => {
             icon={<Zap className="h-12 w-12" />}
             name="Accelerated"
             price="75"
-            speed="100 Mbps"
             features={[
               "Perfect for multiple devices",
               "HD/4K streaming",
@@ -58,7 +56,6 @@ const ServicePackages = () => {
             icon={<Award className="h-12 w-12" />}
             name="Ultra"
             price="100"
-            speed="250 Mbps"
             features={[
               "Best for large households",
               "Multiple 4K streams simultaneously",
@@ -92,7 +89,7 @@ const ServicePackages = () => {
 };
 
 // Package Card Component
-const PackageCard = ({ icon, name, price, speed, features, recommended }) => {
+const PackageCard = ({ icon, name, price, features, recommended }) => {
   return (
     <Card className={`overflow-hidden h-full flex flex-col ${recommended ? 'border-blue-600 border-2 shadow-lg' : ''}`}>
       {recommended && (
@@ -108,9 +105,6 @@ const PackageCard = ({ icon, name, price, speed, features, recommended }) => {
         <div className="mt-4 mb-2">
           <span className="text-3xl font-bold">${price}</span>
           <span className="text-gray-500">/month</span>
-        </div>
-        <div className="font-semibold text-lg text-blue-800">
-          Up to {speed}
         </div>
       </CardHeader>
       <CardContent className="pt-6 flex-grow">
