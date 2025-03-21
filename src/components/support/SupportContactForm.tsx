@@ -10,9 +10,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-import { sendContactForm } from "@/components/contact/contact-form-utils";
 import { Loader2, MailIcon } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import emailjs from 'emailjs-com';
+import { toast } from "sonner";
+import { EMAILJS_SERVICE_ID, EMAILJS_PUBLIC_KEY } from "@/components/contact/contact-form-utils";
+
+// Support form specific template ID
+const SUPPORT_TEMPLATE_ID = "template_cav6uez";
 
 const supportFormSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address" }),
@@ -43,35 +48,64 @@ const SupportContactForm = () => {
     setError(null);
     
     try {
-      // Adapt the data to match the contact form structure
-      const formData = {
-        email: data.email,
-        name: data.name,
-        address: "N/A - Support Request",
-        city: "N/A - Support Request",
-        phone: "",
-        best_time_to_call: "NA",
-        package: "support",
-        message: `${data.subject}\n\n${data.message}`,
+      console.log("Starting email sending process for support form...");
+      console.log("Form data to send:", JSON.stringify(data, null, 2));
+      
+      // Initialize EmailJS with the public key
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+      console.log("EmailJS initialized with public key");
+      
+      // Prepare template parameters for the support template
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message,
+        reply_to: data.email,
       };
       
-      const success = await sendContactForm(formData);
+      console.log("Prepared template params:", JSON.stringify(templateParams, null, 2));
+      console.log("Service ID:", EMAILJS_SERVICE_ID);
+      console.log("Template ID:", SUPPORT_TEMPLATE_ID);
       
-      if (success) {
-        form.reset();
-        navigate("/thank-you");
-      } else {
-        setError("Failed to send your support request. Please try again or call us directly.");
-      }
+      // Send email using the specified support template
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        SUPPORT_TEMPLATE_ID,
+        templateParams
+      );
+      
+      console.log("EmailJS Response:", response);
+      console.log("Response Status:", response.status);
+      console.log("Response Text:", response.text);
+      
+      toast.success("Your support request has been sent! We'll contact you shortly.");
+      form.reset();
+      navigate("/thank-you");
     } catch (error) {
       console.error("Support form submission error:", error);
-      let errorMessage = "An unexpected error occurred";
+      
+      let errorMessage = "Failed to send your support request";
       
       if (error instanceof Error) {
         errorMessage += `: ${error.message}`;
+        console.error("Error message:", error.message);
+        console.error("Error stack:", error.stack);
+      } else if (typeof error === 'object' && error !== null) {
+        console.error("Error details:", JSON.stringify(error));
+        try {
+          // @ts-ignore
+          if (error.text) {
+            // @ts-ignore
+            errorMessage += `: ${error.text}`;
+          }
+        } catch (e) {
+          console.error("Error parsing error object:", e);
+        }
       }
       
       setError(errorMessage);
+      toast.error(errorMessage);
     } finally {
       setIsSubmitting(false);
     }
