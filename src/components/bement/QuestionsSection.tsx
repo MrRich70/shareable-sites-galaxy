@@ -24,16 +24,49 @@ const QuestionsSection = () => {
           <Accordion type="single" collapsible className="bg-white rounded-lg shadow-sm">
             <AccordionItem value="item-1">
               <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                <span className="text-left font-medium">What is the history of Bement, IL?</span>
+                <span className="text-left font-medium">What is the current population and demographic profile of Bement, IL?</span>
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
                 <p className="text-gray-700">
-                  Bement was founded in 1854 when the Great Western Railroad (now the Wabash) built its track through the area. It was named after Edward Bement, a railroad investor from New York who never actually visited the town bearing his name. The town gained historical significance as the location where Abraham Lincoln and Stephen Douglas planned their famous debates at Bryant Cottage in 1858. Throughout its history, Bement has been predominantly an agricultural community, with its economy centered around farming, particularly corn and soybeans.
+                  As of 2025, Bement has a projected population of 1,462. The racial composition is predominantly White (95.7%), followed by Hispanic (1.9%) and Black (1.6%). The median age is 39.4 years, with a slight difference between males (39.6 years) and females (39.2 years).
                 </p>
               </AccordionContent>
             </AccordionItem>
             
             <AccordionItem value="item-2">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                <span className="text-left font-medium">What is the economic situation in Bement, IL?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-700">
+                  The median household income in Bement is $79,583 as of 2023, with an average household income of $81,777. The poverty rate is relatively low at 5.65%. However, Bement faces economic challenges, as Illinois has experienced a weak job market with unemployment rates rising to 6.5% in recent months.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+            
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                <span className="text-left font-medium">How has Bement's population changed in recent years?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-700">
+                  Bement has experienced a slight population decline. From 2020 to 2025, the population is projected to decrease from 1,484 to 1,462, representing a -1.82% change. The current annual rate of population change is -0.2%.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+            
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                <span className="text-left font-medium">What are some key features of Bement's community?</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-4">
+                <p className="text-gray-700">
+                  Bement is a village located in Piatt County, Illinois. It has a high rate of U.S.-born citizens (99.4%) and is primarily English-speaking, with 99% of residents speaking only English. The community has a high homeownership rate of 81.7%. Bement is part of the Champaign-Urbana, IL Core Based Statistical Area, which is classified as a metro area.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+            
+            <AccordionItem value="item-5">
               <AccordionTrigger className="px-6 py-4 hover:no-underline">
                 <span className="text-left font-medium">What are Bement's fascinating Abraham Lincoln connections?</span>
               </AccordionTrigger>
@@ -43,40 +76,11 @@ const QuestionsSection = () => {
                 </p>
               </AccordionContent>
             </AccordionItem>
-            
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                <span className="text-left font-medium">What unique traditions does Bement celebrate annually?</span>
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                <p className="text-gray-700">
-                  Bement is known for its distinctive annual traditions that bring the community together. The most beloved is "Old Glory Days," a multi-day celebration around Independence Day featuring a grand parade, carnival rides, community cookouts, and a spectacular fireworks display. Another unique tradition is the "Lincoln Heritage Festival" held each September, commemorating the historic Lincoln-Douglas debate planning meeting. During this event, local residents dress in period costumes for historical reenactments, crafts demonstrations, and educational programs about 19th-century life. The community also hosts "Bement Fall Fest," celebrating the harvest season with a farmers market, pumpkin decorating contests, and apple-themed culinary competitions that showcase local agricultural products.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-4">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                <span className="text-left font-medium">How has Bement's agricultural heritage shaped the community?</span>
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                <p className="text-gray-700">
-                  Agriculture has been the cornerstone of Bement's identity since its founding. The rich prairie soil of central Illinois made the area perfect for farming, particularly corn and soybeans. This agricultural foundation has shaped not only the local economy but also the community's values and traditions. The grain elevator standing tall in the center of town serves as both a practical facility and a symbol of the town's agricultural roots. Many family farms in the area have been passed down through multiple generations, creating a strong sense of heritage and stewardship of the land. The Bement High School's agricultural education program and Future Farmers of America chapter remain among the school's most active organizations, reflecting the continued importance of agriculture to the community's identity and future.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-5">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                <span className="text-left font-medium">What famous people are from Bement?</span>
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                <p className="text-gray-700">
-                  Despite its small size, Bement has produced several notable individuals. Henry C. Nugent, who served as an Illinois state representative in the early 1900s, was born and raised in Bement. Alice Corbin Henderson, an influential poet and associate editor of Poetry magazine who helped shape the Chicago Renaissance literary movement, spent part of her childhood in Bement. More recently, Dr. Marion Sullinger, a pioneering researcher in agricultural genetics whose work with corn hybrids significantly improved crop yields throughout the Midwest, was born on a farm just outside Bement. The town also claims connection to General Wesley Merritt, a Civil War cavalry officer who later served as Superintendent of West Point, as his family briefly resided in the Bement area during his childhood.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
           </Accordion>
+          
+          <div className="mt-8 text-sm text-gray-500">
+            <p>Sources: Illinois Demographics, World Population Review, Illinois Budget Office, AreaVibes, Zip-Codes.com, DataUSA, and other official census and demographic resources.</p>
+          </div>
         </div>
       </div>
     </section>
