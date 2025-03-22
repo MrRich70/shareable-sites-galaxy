@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import TopBar from "./TopBar";
 import Header from "./Header";
 import Footer from "./Footer";
+import ChatBox from "../chat/ChatBox";
 import { Helmet } from "react-helmet";
 
 interface MainLayoutProps {
@@ -42,6 +43,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         {children}
       </main>
       <Footer />
+      <ChatBox />
     </div>
   );
 };
