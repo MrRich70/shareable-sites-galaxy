@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Globe, CreditCard, LifeBuoy } from "lucide-react";
+import { Link } from "react-router-dom";
 import ServiceCard from "@/components/argenta/ServiceCard";
 
 const HeroSection = () => {
@@ -14,6 +15,35 @@ const HeroSection = () => {
           <p className="text-xl text-gray-700 mb-8">
             Fast, reliable internet service for Elwin, IL residents and businesses.
           </p>
+          
+          {/* Structured data for local business */}
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+            {
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "NJoy Communications Internet Services",
+              "description": "Internet service provider in Elwin, IL",
+              "url": "https://njoycom.com/elwin-il-internet-service-provider",
+              "telephone": "(217) 330-6157",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "111 Main St",
+                "addressLocality": "Elwin",
+                "addressRegion": "IL",
+                "postalCode": "62521",
+                "addressCountry": "US"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "39.7634",
+                "longitude": "-89.0401"
+              },
+              "sameAs": [
+                "https://www.facebook.com/NJoyCommunications/",
+                "https://twitter.com/njoycom"
+              ]
+            }
+          `}} />
         </div>
 
         {/* Service Cards */}

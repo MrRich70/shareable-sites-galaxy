@@ -14,7 +14,10 @@ const ServicePackages = () => {
   ];
 
   return (
-    <MainLayout>
+    <MainLayout
+      title="Internet Service Packages | NJoy Communications"
+      description="Choose from a variety of internet packages in Central Illinois. No data caps, no contracts, and 24/7 local support. Find the perfect plan for your needs."
+    >
       <div className="container mx-auto px-4 py-12">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h1 className="text-4xl font-bold text-blue-900 mb-6">Internet Service Packages</h1>
@@ -89,6 +92,49 @@ const ServicePackages = () => {
             </Link>
           </div>
         </div>
+        
+        {/* Structured data for products/services */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "Product",
+                "name": "Connected Internet Package",
+                "description": "Basic internet package for browsing, email, and light streaming",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "50.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              },
+              {
+                "@type": "Product",
+                "name": "Accelerated Internet Package",
+                "description": "Mid-tier internet package for multiple devices, streaming and gaming",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "75.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              },
+              {
+                "@type": "Product",
+                "name": "Ultra Internet Package",
+                "description": "Premium internet package for large households with high bandwidth needs",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "100.00",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                }
+              }
+            ]
+          }
+        `}} />
       </div>
     </MainLayout>
   );

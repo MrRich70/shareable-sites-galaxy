@@ -15,6 +15,39 @@ const HeroSection = () => {
           <p className="text-xl text-gray-700 mb-8">
             Fast, reliable internet service for Lake City, IL residents and businesses.
           </p>
+          
+          {/* Structured data for local service area */}
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Internet Service Provider",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "NJoy Communications Internet Services",
+                "telephone": "(217) 330-6157",
+                "areaServed": {
+                  "@type": "City",
+                  "name": "Lake City",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Lake City",
+                    "addressRegion": "IL",
+                    "addressCountry": "US"
+                  }
+                }
+              },
+              "description": "High-speed internet service for Lake City, IL residents and businesses",
+              "offers": {
+                "@type": "Offer",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "50",
+                  "priceCurrency": "USD"
+                }
+              }
+            }
+          `}} />
         </div>
 
         {/* Service Cards */}

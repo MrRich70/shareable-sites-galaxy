@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Globe, CreditCard, LifeBuoy } from "lucide-react";
@@ -6,7 +7,10 @@ import MainLayout from "@/components/layouts/MainLayout";
 
 const Index = () => {
   return (
-    <MainLayout>
+    <MainLayout 
+      title="NJoy Communications | High-Speed Internet Service in Central Illinois"
+      description="Reliable internet service provider offering fast connection speeds for homes and businesses in Central Illinois. No contracts, no data caps, and local support."
+    >
       <div className="min-h-screen flex flex-col">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">

@@ -11,7 +11,10 @@ import FamilyStorySection from "@/components/elwin/FamilyStorySection";
 
 const ElwinIL = () => {
   return (
-    <MainLayout>
+    <MainLayout
+      title="Internet Service Provider in Elwin, IL | NJoy Communications"
+      description="High-speed internet service in Elwin, IL. Reliable connections, no data caps, and local customer support. Find the right plan for your home or business."
+    >
       <div className="min-h-screen flex flex-col">
         <HeroSection />
         <MapSection />

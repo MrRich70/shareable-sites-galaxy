@@ -21,7 +21,10 @@ const Contact = () => {
   }, [location.search]);
 
   return (
-    <MainLayout>
+    <MainLayout
+      title="Contact NJoy Communications | Internet Service in Central Illinois"
+      description="Get in touch with NJoy Communications for fast, reliable internet service in Central Illinois. Contact us online or call (217) 330-6157 for immediate assistance."
+    >
       <div className="container mx-auto px-4 py-12">
         <div className="text-center max-w-3xl mx-auto mb-8">
           <h1 className="text-4xl font-bold text-blue-900 mb-4">Get Connected with NJoy</h1>
@@ -37,6 +40,22 @@ const Contact = () => {
           {/* Contact Form */}
           <ContactForm initialPackage={selectedPackage} />
         </div>
+        
+        {/* Structured data for contact page */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact NJoy Communications",
+            "description": "Contact page for NJoy Communications internet services",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "NJoy Communications Internet Services",
+              "telephone": "+1-217-330-6157",
+              "email": "info@njoycom.com"
+            }
+          }
+        `}} />
       </div>
     </MainLayout>
   );
