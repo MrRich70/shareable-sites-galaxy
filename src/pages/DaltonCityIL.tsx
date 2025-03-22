@@ -6,6 +6,7 @@ import MapSection from "@/components/daltoncity/MapSection";
 import AttractionsSection from "@/components/daltoncity/AttractionsSection";
 import QuestionsSection from "@/components/daltoncity/QuestionsSection";
 import FeaturesSection from "@/components/daltoncity/FeaturesSection";
+import FamilyStorySection from "@/components/daltoncity/FamilyStorySection";
 
 const DaltonCityIL = () => {
   return (
@@ -14,6 +15,7 @@ const DaltonCityIL = () => {
         <HeroSection />
         <MapSection />
         <AttractionsSection />
+        <FamilyStorySection />
         <QuestionsSection />
         <FeaturesSection />
       </div>
