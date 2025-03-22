@@ -1,16 +1,20 @@
-
 # Enable rewriting
 RewriteEngine On
 
-# If the requested filename exists, serve it
+# If the requested path is a file that exists, serve it directly
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
-# If the requested directory exists, serve it
+# If the requested path is a directory that exists, serve it directly
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Otherwise, redirect to index.html to let React Router handle it
+# For all static assets with specific extensions, let them be served directly if they exist
+RewriteCond %{REQUEST_URI} \.(css|js|jpg|jpeg|png|gif|ico|svg|webp|ttf|woff|woff2|eot|pdf|xml)$ [NC]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Redirect all other requests to index.html to let React Router handle routing
 RewriteRule ^ index.html [QSA,L]
 
 # Set proper MIME types
