@@ -99,6 +99,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                 <li><a href="https://njoycom.uisp.com/crm/login" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white">Billing</a></li>
                 <li><Link to="/support" className="text-blue-200 hover:text-white">Support</Link></li>
                 <li><Link to="/support" className="text-blue-200 hover:text-white">Contact</Link></li>
+                <li><Link to="/internet-providers-near-me" className="text-blue-200 hover:text-white">Internet Providers Near Me</Link></li>
               </ul>
             </div>
             <div>
