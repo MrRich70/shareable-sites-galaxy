@@ -7,12 +7,14 @@ import AttractionsSection from "@/components/oakley/AttractionsSection";
 import QuestionsSection from "@/components/oakley/QuestionsSection";
 import FeaturesSection from "@/components/oakley/FeaturesSection";
 import FamilyStorySection from "@/components/oakley/FamilyStorySection";
+import OakleyBannerSection from "@/components/oakley/OakleyBannerSection";
 
 const OakleyIL = () => {
   return (
     <MainLayout>
       <div className="min-h-screen flex flex-col">
         <HeroSection />
+        <OakleyBannerSection />
         <MapSection />
         <AttractionsSection />
         <QuestionsSection />
