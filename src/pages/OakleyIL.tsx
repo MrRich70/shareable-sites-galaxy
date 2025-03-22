@@ -6,6 +6,7 @@ import MapSection from "@/components/oakley/MapSection";
 import AttractionsSection from "@/components/oakley/AttractionsSection";
 import QuestionsSection from "@/components/oakley/QuestionsSection";
 import FeaturesSection from "@/components/oakley/FeaturesSection";
+import FamilyStorySection from "@/components/oakley/FamilyStorySection";
 
 const OakleyIL = () => {
   return (
@@ -16,6 +17,7 @@ const OakleyIL = () => {
         <AttractionsSection />
         <QuestionsSection />
         <FeaturesSection />
+        <FamilyStorySection />
       </div>
     </MainLayout>
   );
