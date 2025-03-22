@@ -8,6 +8,7 @@ import QuestionsSection from "@/components/cerrogordo/QuestionsSection";
 import HappyCustomersSection from "@/components/cerrogordo/HappyCustomersSection";
 import FeaturesSection from "@/components/cerrogordo/FeaturesSection";
 import CerroBannerSection from "@/components/cerrogordo/CerroBannerSection";
+import FamilyStorySection from "@/components/cerrogordo/FamilyStorySection";
 
 const CerroGordoIL = () => {
   return (
@@ -18,6 +19,7 @@ const CerroGordoIL = () => {
         <MapSection />
         <AttractionsSection />
         <QuestionsSection />
+        <FamilyStorySection />
         <HappyCustomersSection />
         <FeaturesSection />
       </div>
