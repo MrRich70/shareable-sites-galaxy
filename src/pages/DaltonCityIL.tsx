@@ -7,6 +7,7 @@ import AttractionsSection from "@/components/daltoncity/AttractionsSection";
 import QuestionsSection from "@/components/daltoncity/QuestionsSection";
 import FeaturesSection from "@/components/daltoncity/FeaturesSection";
 import FamilyStorySection from "@/components/daltoncity/FamilyStorySection";
+import DaltonCityBannerSection from "@/components/daltoncity/DaltonCityBannerSection";
 
 const DaltonCityIL = () => {
   return (
@@ -14,6 +15,7 @@ const DaltonCityIL = () => {
       <div className="min-h-screen flex flex-col">
         <HeroSection />
         <MapSection />
+        <DaltonCityBannerSection />
         <AttractionsSection />
         <FamilyStorySection />
         <QuestionsSection />
