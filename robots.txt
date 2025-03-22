@@ -1,7 +1,10 @@
 
+# Allow crawling of all content by default
 User-agent: *
 Allow: /
 
-Sitemap: https://njoycom.com/sitemap.xml
-
+# Disallow thank you page (already in your existing file)
 Disallow: /thank-you
+
+# Point to sitemap
+Sitemap: https://njoycom.com/sitemap.xml
