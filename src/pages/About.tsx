@@ -4,6 +4,7 @@ import MainLayout from "@/components/layouts/MainLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, Users, Home, Building2, Calendar, Award, Signal, MapPin, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -160,9 +161,11 @@ const About = () => {
                 Call Us: (217) 330-6157
               </Button>
             </a>
-            <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-              Contact Online
-            </Button>
+            <Link to="/support">
+              <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                Contact Online
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -203,3 +206,4 @@ const ValueCard = ({ title, description, icon }) => {
 };
 
 export default About;
+
