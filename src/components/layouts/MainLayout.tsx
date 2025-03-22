@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
+
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { 
   NavigationMenu,
   NavigationMenuItem,
@@ -15,6 +16,13 @@ interface MainLayoutProps {
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+  const location = useLocation();
+  
+  // Effect to scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b bg-white">
