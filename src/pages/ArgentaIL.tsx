@@ -7,6 +7,7 @@ import AttractionsSection from "@/components/argenta/AttractionsSection";
 import QuestionsSection from "@/components/argenta/QuestionsSection";
 import HappyCustomersSection from "@/components/argenta/HappyCustomersSection";
 import FeaturesSection from "@/components/argenta/FeaturesSection";
+import ArgentaBannerSection from "@/components/argenta/ArgentaBannerSection";
 
 const ArgentaIL = () => {
   return (
@@ -14,6 +15,7 @@ const ArgentaIL = () => {
       <div className="min-h-screen flex flex-col">
         <HeroSection />
         <MapSection />
+        <ArgentaBannerSection />
         <AttractionsSection />
         <QuestionsSection />
         <HappyCustomersSection />
