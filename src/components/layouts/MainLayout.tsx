@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -99,7 +98,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                 <li><Link to="/service-packages" className="text-blue-200 hover:text-white">Services</Link></li>
                 <li><a href="https://njoycom.uisp.com/crm/login" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white">Billing</a></li>
                 <li><Link to="/support" className="text-blue-200 hover:text-white">Support</Link></li>
-                <li><Link to="/contact" className="text-blue-200 hover:text-white">Contact</Link></li>
+                <li><Link to="/support" className="text-blue-200 hover:text-white">Contact</Link></li>
               </ul>
             </div>
             <div>
