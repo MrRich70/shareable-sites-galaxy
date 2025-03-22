@@ -6,6 +6,7 @@ import MapSection from "@/components/laplace/MapSection";
 import AttractionsSection from "@/components/laplace/AttractionsSection";
 import QuestionsSection from "@/components/laplace/QuestionsSection";
 import FeaturesSection from "@/components/laplace/FeaturesSection";
+import FamilyStorySection from "@/components/laplace/FamilyStorySection";
 
 const LaPlaceIL = () => {
   return (
@@ -16,6 +17,7 @@ const LaPlaceIL = () => {
         <AttractionsSection />
         <QuestionsSection />
         <FeaturesSection />
+        <FamilyStorySection />
         
         {/* Citations Section */}
         <section className="py-8 bg-gray-50">
