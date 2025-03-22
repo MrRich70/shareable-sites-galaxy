@@ -8,12 +8,14 @@ import QuestionsSection from "@/components/bement/QuestionsSection";
 import HappyCustomersSection from "@/components/bement/HappyCustomersSection";
 import FeaturesSection from "@/components/bement/FeaturesSection";
 import FamilyStorySection from "@/components/bement/FamilyStorySection";
+import BementBannerSection from "@/components/bement/BementBannerSection";
 
 const BementIL = () => {
   return (
     <MainLayout>
       <div className="min-h-screen flex flex-col">
         <HeroSection />
+        <BementBannerSection />
         <MapSection />
         <AttractionsSection />
         <FamilyStorySection />
