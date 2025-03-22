@@ -8,12 +8,14 @@ import QuestionsSection from "@/components/oreana/QuestionsSection";
 import FamilyStorySection from "@/components/oreana/FamilyStorySection";
 import FeaturesSection from "@/components/oreana/FeaturesSection";
 import CitationsSection from "@/components/oreana/CitationsSection";
+import OreanaBannerSection from "@/components/oreana/OreanaBannerSection";
 
 const OreanaIL = () => {
   return (
     <MainLayout>
       <div className="min-h-screen flex flex-col">
         <HeroSection />
+        <OreanaBannerSection />
         <MapSection />
         <AttractionsSection />
         <QuestionsSection />
