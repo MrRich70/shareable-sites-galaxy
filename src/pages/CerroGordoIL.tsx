@@ -7,12 +7,14 @@ import AttractionsSection from "@/components/cerrogordo/AttractionsSection";
 import QuestionsSection from "@/components/cerrogordo/QuestionsSection";
 import HappyCustomersSection from "@/components/cerrogordo/HappyCustomersSection";
 import FeaturesSection from "@/components/cerrogordo/FeaturesSection";
+import CerroBannerSection from "@/components/cerrogordo/CerroBannerSection";
 
 const CerroGordoIL = () => {
   return (
     <MainLayout>
       <div className="min-h-screen flex flex-col">
         <HeroSection />
+        <CerroBannerSection />
         <MapSection />
         <AttractionsSection />
         <QuestionsSection />
