@@ -7,6 +7,7 @@ import AttractionsSection from "@/components/bement/AttractionsSection";
 import QuestionsSection from "@/components/bement/QuestionsSection";
 import HappyCustomersSection from "@/components/bement/HappyCustomersSection";
 import FeaturesSection from "@/components/bement/FeaturesSection";
+import FamilyStorySection from "@/components/bement/FamilyStorySection";
 
 const BementIL = () => {
   return (
@@ -15,6 +16,7 @@ const BementIL = () => {
         <HeroSection />
         <MapSection />
         <AttractionsSection />
+        <FamilyStorySection />
         <QuestionsSection />
         <HappyCustomersSection />
         <FeaturesSection />
