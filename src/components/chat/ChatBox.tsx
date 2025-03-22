@@ -24,6 +24,7 @@ const initialMessages: Message[] = [
 ];
 
 const ChatBox = () => {
+  // Changed initial state to false so the chat starts hidden
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [inputValue, setInputValue] = useState("");
