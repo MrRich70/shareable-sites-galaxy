@@ -25,6 +25,7 @@ import OakleyIL from "./pages/OakleyIL";
 import OreanaIL from "./pages/OreanaIL";
 import DaltonCityIL from "./pages/DaltonCityIL";
 import BilmineIL from "./pages/BilmineIL";
+import InternetProvidersNearMe from "./pages/InternetProvidersNearMe";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/oreana-il-internet-service-provider" element={<OreanaIL />} />
           <Route path="/dalton-city-il-internet-service-provider" element={<DaltonCityIL />} />
           <Route path="/milmine-il-internet-service-provider" element={<BilmineIL />} />
+          <Route path="/internet-providers-near-me" element={<InternetProvidersNearMe />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
