@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,7 +6,7 @@ import { toast } from "sonner";
 import { sendSMS, SMSMessage, TWILIO_PHONE_NUMBER } from "@/utils/sms-utils";
 
 // Support phone number to send SMS to
-const SUPPORT_PHONE_NUMBER = "+1XXXXXXXXXX"; // Replace with your actual support phone number
+const SUPPORT_PHONE_NUMBER = "+12175219814"; // Updated with customer's cell phone number
 
 interface Message {
   id: string;
