@@ -11,7 +11,7 @@ const FooterCopyright = () => {
         <span className="text-blue-700">|</span>
         <Link to="/terms" className="text-blue-200 hover:text-white">Terms</Link>
         <span className="text-blue-700">|</span>
-        <Link to="/sitemap.xml" className="text-blue-200 hover:text-white">Sitemap</Link>
+        <a href="/sitemap.xml" className="text-blue-200 hover:text-white">Sitemap</a>
       </div>
       <p className="mt-3 text-xs text-blue-400">
         Serving Central Illinois: Argenta, Bement, Cerro Gordo, Dalton City, Elwin, 

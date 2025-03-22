@@ -39,14 +39,14 @@ const FooterLegalLinks = () => {
           </Link>
         </li>
         <li>
-          <Link 
-            to="/sitemap.xml" 
+          <a 
+            href="/sitemap.xml" 
             className="text-blue-200 hover:text-white flex items-center"
             aria-label="View our Site Map"
           >
             <ChevronRight className="h-4 w-4 mr-1" /> 
             <span>Site Map</span>
-          </Link>
+          </a>
         </li>
       </ul>
     </div>
