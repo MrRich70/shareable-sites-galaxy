@@ -5,7 +5,6 @@ import HeroSection from "@/components/laplace/HeroSection";
 import MapSection from "@/components/laplace/MapSection";
 import AttractionsSection from "@/components/laplace/AttractionsSection";
 import QuestionsSection from "@/components/laplace/QuestionsSection";
-import HappyCustomersSection from "@/components/laplace/HappyCustomersSection";
 import FeaturesSection from "@/components/laplace/FeaturesSection";
 
 const LaPlaceIL = () => {
@@ -16,7 +15,6 @@ const LaPlaceIL = () => {
         <MapSection />
         <AttractionsSection />
         <QuestionsSection />
-        <HappyCustomersSection />
         <FeaturesSection />
         
         {/* Citations Section */}
