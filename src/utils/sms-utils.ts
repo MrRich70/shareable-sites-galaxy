@@ -1,3 +1,4 @@
+
 // Twilio SMS integration utilities
 
 export interface SMSMessage {
@@ -9,7 +10,7 @@ export interface SMSMessage {
 // Twilio credentials - in production, these should be stored securely
 // Either in environment variables or a secure backend
 export const TWILIO_ACCOUNT_SID = "AC592a08df2d9d3a2be89d65abed017207"; // Your Twilio Account SID
-export const TWILIO_AUTH_TOKEN = "YOUR_AUTH_TOKEN";   // Replace with your Twilio Auth Token
+export const TWILIO_AUTH_TOKEN = "22fb592e4d2bd5de630d9a31e52d663e";   // Your Twilio Auth Token
 export const TWILIO_PHONE_NUMBER = "+1XXXXXXXXXX";    // Replace with your Twilio phone number
 
 /**
@@ -45,6 +46,7 @@ export const sendSMS = async (message: SMSMessage): Promise<boolean> => {
     // For now, we're just logging the message and simulating success
     console.log("SMS would be sent with Twilio credentials:", {
       accountSid: TWILIO_ACCOUNT_SID.substring(0, 3) + '...',
+      authToken: TWILIO_AUTH_TOKEN.substring(0, 3) + '...',
       from: message.from || TWILIO_PHONE_NUMBER,
       to: message.to,
       body: message.body
