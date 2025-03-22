@@ -7,6 +7,7 @@ import AttractionsSection from "@/components/laplace/AttractionsSection";
 import QuestionsSection from "@/components/laplace/QuestionsSection";
 import FeaturesSection from "@/components/laplace/FeaturesSection";
 import FamilyStorySection from "@/components/laplace/FamilyStorySection";
+import HappyCustomersSection from "@/components/laplace/HappyCustomersSection";
 
 const LaPlaceIL = () => {
   return (
@@ -16,6 +17,7 @@ const LaPlaceIL = () => {
         <MapSection />
         <AttractionsSection />
         <QuestionsSection />
+        <HappyCustomersSection />
         <FeaturesSection />
         <FamilyStorySection />
         
