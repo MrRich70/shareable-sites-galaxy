@@ -14,7 +14,7 @@ const HeroSection = () => (
           Reliable, affordable internet service for Dalton City residents and businesses
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link to="/contact">
+          <Link to="/service-packages">
             <Button size="lg" className="bg-blue-700 hover:bg-blue-800">
               Check Availability
             </Button>
