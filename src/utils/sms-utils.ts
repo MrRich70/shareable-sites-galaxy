@@ -1,4 +1,3 @@
-
 // Twilio SMS integration utilities
 
 export interface SMSMessage {
@@ -9,9 +8,9 @@ export interface SMSMessage {
 
 // Twilio credentials - in production, these should be stored securely
 // Either in environment variables or a secure backend
-const TWILIO_ACCOUNT_SID = "AC592a08df2d9d3a2be89d65abed017207"; // Your Twilio Account SID
-const TWILIO_AUTH_TOKEN = "YOUR_AUTH_TOKEN";   // Replace with your Twilio Auth Token
-const TWILIO_PHONE_NUMBER = "+1XXXXXXXXXX";    // Replace with your Twilio phone number
+export const TWILIO_ACCOUNT_SID = "AC592a08df2d9d3a2be89d65abed017207"; // Your Twilio Account SID
+export const TWILIO_AUTH_TOKEN = "YOUR_AUTH_TOKEN";   // Replace with your Twilio Auth Token
+export const TWILIO_PHONE_NUMBER = "+1XXXXXXXXXX";    // Replace with your Twilio phone number
 
 /**
  * Sends an SMS message using Twilio API

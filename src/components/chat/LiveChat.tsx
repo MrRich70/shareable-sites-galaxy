@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { MessageSquare, X, Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { sendSMS, SMSMessage } from "@/utils/sms-utils";
+import { sendSMS, SMSMessage, TWILIO_PHONE_NUMBER } from "@/utils/sms-utils";
 
 // Support phone number to send SMS to
 const SUPPORT_PHONE_NUMBER = "+1XXXXXXXXXX"; // Replace with your actual support phone number
