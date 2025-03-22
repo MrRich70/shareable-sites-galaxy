@@ -5,6 +5,7 @@ import HeroSection from "@/components/macon/HeroSection";
 import MapSection from "@/components/macon/MapSection";
 import AttractionsSection from "@/components/macon/AttractionsSection";
 import QuestionsSection from "@/components/macon/QuestionsSection";
+import FamilyStorySection from "@/components/macon/FamilyStorySection";
 import FeaturesSection from "@/components/macon/FeaturesSection";
 import CitationsSection from "@/components/macon/CitationsSection";
 
@@ -15,6 +16,7 @@ const MaconIL = () => {
         <HeroSection />
         <MapSection />
         <AttractionsSection />
+        <FamilyStorySection />
         <QuestionsSection />
         <FeaturesSection />
         <CitationsSection />
