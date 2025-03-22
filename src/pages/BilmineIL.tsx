@@ -8,12 +8,14 @@ import QuestionsSection from "@/components/bilmine/QuestionsSection";
 import HappyCustomersSection from "@/components/bilmine/HappyCustomersSection";
 import FeaturesSection from "@/components/bilmine/FeaturesSection";
 import FamilyStorySection from "@/components/bilmine/FamilyStorySection";
+import BilmineBannerSection from "@/components/bilmine/BilmineBannerSection";
 
 const BilmineIL = () => {
   return (
     <MainLayout>
       <div className="min-h-screen flex flex-col">
         <HeroSection />
+        <BilmineBannerSection />
         <MapSection />
         <AttractionsSection />
         <QuestionsSection />
