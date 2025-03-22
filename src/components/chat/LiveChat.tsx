@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -6,7 +7,7 @@ import { toast } from "sonner";
 import { sendSMS, SMSMessage, TWILIO_PHONE_NUMBER } from "@/utils/sms-utils";
 
 // Support phone number to send SMS to
-const SUPPORT_PHONE_NUMBER = "+12175219814"; // Updated with customer's cell phone number
+const SUPPORT_PHONE_NUMBER = "+12175219814"; // Customer's cell phone number
 
 interface Message {
   id: string;
@@ -66,18 +67,18 @@ const LiveChat = () => {
     setIsSending(true);
     
     try {
-      // Prepare SMS message for Twilio
+      // Prepare SMS message for sending
       const smsMessage: SMSMessage = {
         to: SUPPORT_PHONE_NUMBER,
-        from: TWILIO_PHONE_NUMBER, // This will be used by the server
-        body: `Web Chat: ${message}`
+        from: TWILIO_PHONE_NUMBER,
+        body: `Web Chat (test2.njoycom.net): ${message}`
       };
       
       // Send message to support via SMS
       const success = await sendSMS(smsMessage);
       
       if (success) {
-        // Simulate automated response
+        // Auto response
         const autoResponse: Message = {
           id: `auto-${Date.now()}`,
           text: "Thanks for your message! Our team has been notified and will respond shortly.",
