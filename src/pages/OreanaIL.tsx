@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, WifiIcon, CheckCircle2, Zap, Shield, Clock } from "lucide-react";
 import CityMap from "@/components/maps/CityMap";
+import FamilyStorySection from "@/components/oreana/FamilyStorySection";
 
 const HeroSection = () => (
   <section className="bg-gradient-to-b from-blue-50 to-white py-20">
@@ -229,7 +230,22 @@ const OreanaIL = () => {
         <MapSection />
         <AttractionsSection />
         <QuestionsSection />
+        <FamilyStorySection />
         <FeaturesSection />
+        
+        {/* Citations Section */}
+        <section className="py-8 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h3 className="text-lg font-medium text-gray-700 mb-3">Citations</h3>
+            <div className="text-sm text-gray-600 space-y-1">
+              <p>[1] https://en.wikipedia.org/wiki/Oreana,_Illinois</p>
+              <p>[2] https://www.census.gov/</p>
+              <p>[3] https://datausa.io/profile/geo/oreana-il</p>
+              <p>[4] https://www.macon.il.us/</p>
+              <p>[5] https://www.illinois.gov</p>
+            </div>
+          </div>
+        </section>
       </div>
     </MainLayout>
   );
