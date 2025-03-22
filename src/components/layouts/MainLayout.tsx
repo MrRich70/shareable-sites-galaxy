@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { 
@@ -10,6 +9,7 @@ import {
 import { Phone, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import LiveChat from "@/components/chat/LiveChat";
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -195,6 +195,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           </div>
         </div>
       </footer>
+
+      {/* Live Chat Widget */}
+      <LiveChat />
     </div>
   );
 };
