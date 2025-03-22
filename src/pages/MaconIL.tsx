@@ -3,6 +3,7 @@ import React from "react";
 import MainLayout from "@/components/layouts/MainLayout";
 import { Card } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const MaconIL = () => {
   return (
@@ -15,9 +16,9 @@ const MaconIL = () => {
               <h1 className="text-4xl font-bold mb-4">High-Speed Internet in Macon, IL</h1>
               <p className="text-xl mb-8">Experience reliable connectivity with NJoy Communications, your local internet service provider.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/contact" className="bg-white text-blue-700 hover:bg-blue-100 font-semibold px-6 py-3 rounded-lg transition-colors">
+                <Link to="/service-packages" className="bg-white text-blue-700 hover:bg-blue-100 font-semibold px-6 py-3 rounded-lg transition-colors">
                   Get Started
-                </a>
+                </Link>
                 <a href="/service-packages" className="bg-blue-600 text-white hover:bg-blue-700 font-semibold px-6 py-3 rounded-lg transition-colors">
                   View Plans
                 </a>
