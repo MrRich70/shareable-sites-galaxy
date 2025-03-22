@@ -8,6 +8,13 @@ const HeroSection = () => {
     <section className="bg-gradient-to-b from-blue-50 to-white py-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
+          <div className="mb-8 w-48 h-48">
+            <img 
+              src="/lovable-uploads/08e669e3-3365-4082-bad7-0c9da3a1b03e.png" 
+              alt="La Place, Illinois logo" 
+              className="w-full h-full object-contain"
+            />
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
             High-Speed Internet in La Place, IL
           </h1>
