@@ -8,6 +8,7 @@ import QuestionsSection from "@/components/argenta/QuestionsSection";
 import HappyCustomersSection from "@/components/argenta/HappyCustomersSection";
 import FeaturesSection from "@/components/argenta/FeaturesSection";
 import ArgentaBannerSection from "@/components/argenta/ArgentaBannerSection";
+import FamilyStorySection from "@/components/argenta/FamilyStorySection";
 
 const ArgentaIL = () => {
   return (
@@ -17,6 +18,7 @@ const ArgentaIL = () => {
         <MapSection />
         <ArgentaBannerSection />
         <AttractionsSection />
+        <FamilyStorySection />
         <QuestionsSection />
         <HappyCustomersSection />
         <FeaturesSection />
