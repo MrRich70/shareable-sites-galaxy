@@ -2,11 +2,15 @@
 # Enable rewriting
 RewriteEngine On
 
-# Handle requests for files or directories that actually exist
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+# If the requested filename exists, serve it
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
 
-# Send all other requests to index.html
+# If the requested directory exists, serve it
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Otherwise, redirect to index.html to let React Router handle it
 RewriteRule ^ index.html [QSA,L]
 
 # Set proper MIME types
