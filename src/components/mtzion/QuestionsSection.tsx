@@ -11,51 +11,51 @@ const QuestionsSection = () => (
   <section className="py-16 bg-white">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-blue-900 mb-12 text-center">
-        Frequently Asked Questions About Our Mt. Zion Internet Service
+        Frequently Asked Questions About Mt. Zion, IL
       </h2>
       
       <div className="max-w-4xl mx-auto">
         <Accordion type="single" collapsible className="space-y-4">
           <AccordionItem value="item-1" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-              What internet speeds can I get in Mt. Zion?
+              What is the current population and demographic profile of Mount Zion, IL?
             </AccordionTrigger>
             <AccordionContent className="px-6 py-4 bg-gray-50">
               <p className="text-gray-700">
-                We offer several internet packages in Mt. Zion with speeds ranging from 25 Mbps to 100 Mbps. Our most popular plan provides a consistent 50 Mbps, which is perfect for streaming, gaming, and supporting multiple devices.
+                As of 2025, Mount Zion has a projected population of 5,816. The racial composition is predominantly White (90.22%), followed by Black or African American (4.1%), Asian (3.11%), two or more races (1.63%), and other races (0.94%). The median age is 40.1 years, with males averaging 40.2 years and females 40 years.
               </p>
             </AccordionContent>
           </AccordionItem>
           
           <AccordionItem value="item-2" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-              Is there a contract required for internet service?
+              What is the economic situation in Mount Zion, IL?
             </AccordionTrigger>
             <AccordionContent className="px-6 py-4 bg-gray-50">
               <p className="text-gray-700">
-                We offer both contract and no-contract options. You can save on monthly costs with our 12-month agreement, or choose a month-to-month plan for maximum flexibility.
+                The median household income in Mount Zion is $110,786 as of 2023. The average household income is $123,779, with a poverty rate of 3.5%. The village has experienced economic growth, with the median household income increasing from $99,798 in 2022 to $110,786 in 2023.
               </p>
             </AccordionContent>
           </AccordionItem>
           
           <AccordionItem value="item-3" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-              How reliable is your internet service in Mt. Zion?
+              What are some key features of Mount Zion, IL?
             </AccordionTrigger>
             <AccordionContent className="px-6 py-4 bg-gray-50">
               <p className="text-gray-700">
-                Our network in Mt. Zion maintains a 99.9% uptime guarantee. We have invested in robust infrastructure specifically designed for suburban areas to ensure consistent, reliable service regardless of weather conditions.
+                Mount Zion is a village in Macon County, Illinois. It has a comprehensive land use plan, subdivision ordinances with design standards, and municipal zoning. The village offers various municipal services, including a police department with 11 full-time officers providing 24-hour protection, a public library, and three licensed waste disposal firms. Mount Zion also has two banks and is served by both daily and weekly newspapers.
               </p>
             </AccordionContent>
           </AccordionItem>
           
           <AccordionItem value="item-4" className="border border-gray-200 rounded-lg overflow-hidden">
             <AccordionTrigger className="px-6 py-4 hover:bg-gray-50 text-left font-medium text-blue-900">
-              How soon can I get installed after signing up?
+              How has Mount Zion's population changed in recent years?
             </AccordionTrigger>
             <AccordionContent className="px-6 py-4 bg-gray-50">
               <p className="text-gray-700">
-                Typical installation time in Mt. Zion is 3-5 business days from order date. Our local technicians will coordinate a convenient time for your installation and ensure everything is working perfectly before they leave.
+                Mount Zion has experienced slight population decline in recent years. The 2020 census recorded a population of 6,014, which decreased to 5,878 by 2023. The projected population for 2025 is 5,816, indicating an annual rate of change of -0.5%. Despite this decline, Mount Zion remains the 304th most populated city in Illinois out of 1,445 cities.
               </p>
             </AccordionContent>
           </AccordionItem>
