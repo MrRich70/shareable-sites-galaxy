@@ -50,7 +50,7 @@ const ProvidersFAQSection = () => {
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
                 <p className="text-gray-700">
-                  The internet speed your household needs depends on several factors, including the number of connected devices, types of online activities, and how many users are online simultaneously. For basic web browsing and email with 1-2 devices, 25 Mbps might be sufficient. For households with 3-5 devices where streaming HD video, online gaming, or video conferencing occur, 50-100 Mbps is recommended. Larger households with 5+ devices, multiple simultaneous HD/4K streams, frequent large file downloads, or professional work-from-home setups should consider 100-200+ Mbps. Remember that your actual speed requirements may increase as you add smart home devices, streaming services, or as online applications become more bandwidth-intensive. At NJoy Communications, we can help you assess your specific needs and recommend the most appropriate plan for your household.
+                  At NJoy Communications, we can help you assess your specific needs and recommend the most appropriate plan for your household based on your unique usage patterns and requirements.
                 </p>
               </AccordionContent>
             </AccordionItem>
