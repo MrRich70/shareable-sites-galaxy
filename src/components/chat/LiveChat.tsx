@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { MessageSquare, X, Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { sendSMS, SMSMessage } from "@/utils/sms-utils";
 
-// SMS integration needs to be set up with a service like Twilio
-const TWILIO_ENDPOINT = "https://your-backend-endpoint/sms"; // Replace with actual endpoint
+// Support phone number to send SMS to
+const SUPPORT_PHONE_NUMBER = "+1XXXXXXXXXX"; // Replace with your actual support phone number
 
 interface Message {
   id: string;
@@ -66,26 +67,30 @@ const LiveChat = () => {
     setIsSending(true);
     
     try {
-      // In a real implementation, this would send the message to your backend
-      // which would forward it as an SMS to your phone
-      console.log("Sending message to backend:", message);
-      
-      // Simulate API call
-      // In production, replace with actual API call to your backend/Twilio
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Simulate automated response
-      // In production, this would be replaced by actual SMS responses from your phone
-      const autoResponse: Message = {
-        id: `auto-${Date.now()}`,
-        text: "Thanks for your message! Our team has been notified and will respond shortly.",
-        isUser: false,
-        timestamp: new Date()
+      // Prepare SMS message for Twilio
+      const smsMessage: SMSMessage = {
+        to: SUPPORT_PHONE_NUMBER,
+        from: TWILIO_PHONE_NUMBER, // This will be used by the server
+        body: `Web Chat: ${message}`
       };
       
-      setMessages(prev => [...prev, autoResponse]);
+      // Send message to support via SMS
+      const success = await sendSMS(smsMessage);
       
-      toast.success("Message sent successfully!");
+      if (success) {
+        // Simulate automated response
+        const autoResponse: Message = {
+          id: `auto-${Date.now()}`,
+          text: "Thanks for your message! Our team has been notified and will respond shortly.",
+          isUser: false,
+          timestamp: new Date()
+        };
+        
+        setMessages(prev => [...prev, autoResponse]);
+        toast.success("Message sent successfully!");
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
     } catch (error) {
       console.error("Error sending message:", error);
       toast.error("Failed to send message. Please try again.");
