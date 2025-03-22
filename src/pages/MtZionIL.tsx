@@ -6,6 +6,7 @@ import MapSection from "@/components/mtzion/MapSection";
 import AttractionsSection from "@/components/mtzion/AttractionsSection";
 import QuestionsSection from "@/components/mtzion/QuestionsSection";
 import FeaturesSection from "@/components/mtzion/FeaturesSection";
+import FamilyStorySection from "@/components/mtzion/FamilyStorySection";
 
 const MtZionIL = () => {
   return (
@@ -14,6 +15,7 @@ const MtZionIL = () => {
         <HeroSection />
         <MapSection />
         <AttractionsSection />
+        <FamilyStorySection />
         <QuestionsSection />
         <FeaturesSection />
       </div>
