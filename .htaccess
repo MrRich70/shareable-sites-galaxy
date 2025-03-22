@@ -1,0 +1,21 @@
+
+# Enable rewriting
+RewriteEngine On
+
+# Handle requests for files or directories that actually exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Send all other requests to index.html
+RewriteRule ^ index.html [QSA,L]
+
+# Set proper MIME types
+<IfModule mod_mime.c>
+  AddType application/javascript .js
+  AddType text/css .css
+</IfModule>
+
+# Enable CORS
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>
