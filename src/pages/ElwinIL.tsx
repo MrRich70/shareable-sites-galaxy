@@ -7,6 +7,7 @@ import AttractionsSection from "@/components/elwin/AttractionsSection";
 import QuestionsSection from "@/components/elwin/QuestionsSection";
 import HappyCustomersSection from "@/components/elwin/HappyCustomersSection";
 import FeaturesSection from "@/components/elwin/FeaturesSection";
+import FamilyStorySection from "@/components/elwin/FamilyStorySection";
 
 const ElwinIL = () => {
   return (
@@ -15,6 +16,7 @@ const ElwinIL = () => {
         <HeroSection />
         <MapSection />
         <AttractionsSection />
+        <FamilyStorySection />
         <QuestionsSection />
         <HappyCustomersSection />
         <FeaturesSection />
